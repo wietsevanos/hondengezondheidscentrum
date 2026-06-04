@@ -168,8 +168,65 @@ function HomePage() {
         </div>
       </section>
 
+      {/* BOTTENBOX COLLECTION */}
+      <section className="container-x mt-32">
+        <div className="grid lg:grid-cols-12 gap-10 items-end mb-12">
+          <div className="lg:col-span-7">
+            <p className="eyebrow text-terracotta mb-5">De Bottenbox collectie</p>
+            <h2 className="font-serif text-5xl lg:text-6xl text-forest leading-[1.05]">
+              Vier boxen, <em className="text-olive">één filosofie.</em>
+            </h2>
+          </div>
+          <div className="lg:col-span-5">
+            <p className="text-walnut/80 leading-relaxed">
+              Elke Bottenbox is met zorg samengesteld rond de grootte en de
+              levensfase van jouw hond. Natuurlijke kauwbotten en eerlijke
+              snacks, in vier varianten.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            { img: bottenboxPuppy.url, name: "Bottenbox Puppy", tag: "Voor jonge honden", desc: "Zachte kauwbotten en puppy vriendelijke snacks, perfect voor melktandjes.", bg: "bg-[#b88a3e]", text: "text-cream" },
+            { img: bottenboxMini.url, name: "Bottenbox Mini", tag: "Voor kleine honden", desc: "Zorgvuldig op maat voor kleine kaakjes met veel variatie voor urenlang kauwplezier.", bg: "bg-[#a8b88a]", text: "text-forest" },
+            { img: bottenboxClassic.url, name: "Bottenbox Classic", tag: "Voor middelgrote honden", desc: "Een uitgebalanceerde mix van natuurlijke kauwbotten en gezonde snacks.", bg: "bg-[#c89b8a]", text: "text-cream" },
+            { img: bottenboxGiant.url, name: "Bottenbox Giant", tag: "Voor grote honden", desc: "Extra grote porties, stevige kauwbotten en robuuste snacks voor krachtige kaken.", bg: "bg-[#6b4a32]", text: "text-cream" },
+          ].map((b) => (
+            <article key={b.name} className={`group rounded-3xl overflow-hidden ${b.bg} ${b.text} flex flex-col`}>
+              <div className="p-4">
+                <div className="overflow-hidden rounded-2xl bg-cream/10 aspect-[4/3]">
+                  <img
+                    src={b.img}
+                    alt={b.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[1.2s] ease-out"
+                  />
+                </div>
+              </div>
+              <div className="px-6 pb-7 pt-2 flex flex-col flex-1">
+                <p className="text-[10px] tracking-[0.22em] uppercase opacity-80">{b.tag}</p>
+                <h3 className="font-serif text-2xl lg:text-[1.7rem] mt-2 leading-tight">{b.name}</h3>
+                <p className="mt-3 text-sm opacity-85 leading-relaxed flex-1">{b.desc}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://bottenbox.nl/"
+            target="_blank" rel="noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-forest text-cream text-sm hover:bg-forest/90 transition-colors"
+          >
+            Ontdek alle boxen op bottenbox.nl <ArrowUpRight size={16} />
+          </a>
+        </div>
+      </section>
+
       {/* PHILOSOPHY, sage colored band */}
       <section className="mt-32 bg-sage-soft/50">
+
         <div className="container-x py-24 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 relative">
             <img
