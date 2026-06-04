@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VisieRouteImport } from './routes/visie'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as DienstenRouteImport } from './routes/diensten'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const VisieRoute = VisieRouteImport.update({
   id: '/visie',
   path: '/visie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReviewsRoute = ReviewsRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visie': typeof VisieRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visie': typeof VisieRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,28 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visie': typeof VisieRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/diensten' | '/reviews' | '/visie'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/diensten'
+    | '/reviews'
+    | '/sitemap.xml'
+    | '/visie'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/diensten' | '/reviews' | '/visie'
-  id: '__root__' | '/' | '/contact' | '/diensten' | '/reviews' | '/visie'
+  to: '/' | '/contact' | '/diensten' | '/reviews' | '/sitemap.xml' | '/visie'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/diensten'
+    | '/reviews'
+    | '/sitemap.xml'
+    | '/visie'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +98,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DienstenRoute: typeof DienstenRoute
   ReviewsRoute: typeof ReviewsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VisieRoute: typeof VisieRoute
 }
 
@@ -86,6 +109,13 @@ declare module '@tanstack/react-router' {
       path: '/visie'
       fullPath: '/visie'
       preLoaderRoute: typeof VisieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reviews': {
@@ -124,6 +154,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DienstenRoute: DienstenRoute,
   ReviewsRoute: ReviewsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   VisieRoute: VisieRoute,
 }
 export const routeTree = rootRouteImport
