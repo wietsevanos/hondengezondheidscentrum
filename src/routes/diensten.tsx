@@ -80,35 +80,38 @@ function DienstenPage() {
       </section>
 
       <section className="container-x mt-16 space-y-10">
-        {services.map((s, i) => (
-          <article
-            key={s.title}
-            className={`grid lg:grid-cols-12 gap-8 items-center rounded-3xl overflow-hidden bg-card ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}
-          >
-            <div className="lg:col-span-6 relative">
-              <img src={s.img} alt={s.title} loading="lazy" width={1080} height={1600}
-                className="w-full aspect-[5/4] object-cover" />
-              <span className={`absolute top-5 left-5 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.2em] text-cream ${s.accent}`}>
-                {s.eyebrow}
-              </span>
-            </div>
-            <div className="lg:col-span-5 lg:col-start-8 p-8 lg:p-12">
-              <h2 className="font-serif text-4xl lg:text-5xl text-forest leading-tight">{s.title}</h2>
-              <ul className="mt-8 space-y-3">
-                {s.bullets.map((b) => (
-                  <li key={b} className="flex gap-3 text-walnut">
-                    <Check size={18} className="mt-0.5 text-olive shrink-0" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href={s.link} target="_blank" rel="noreferrer"
-                className="mt-10 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-forest text-cream text-sm hover:bg-olive transition-colors">
-                Bezoek de website <ArrowUpRight size={16} />
-              </a>
-            </div>
-          </article>
-        ))}
+        {services.map((s, i) => {
+          const reversed = i % 2 === 1;
+          return (
+            <article
+              key={s.title}
+              className="grid lg:grid-cols-12 gap-8 items-center rounded-3xl overflow-hidden bg-card"
+            >
+              <div className={`lg:col-span-6 relative ${reversed ? "lg:order-2" : ""}`}>
+                <img src={s.img} alt={s.title} loading="lazy" width={1080} height={1600}
+                  className="w-full aspect-[5/4] object-cover" />
+                <span className={`absolute top-5 left-5 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.2em] text-cream ${s.accent}`}>
+                  {s.eyebrow}
+                </span>
+              </div>
+              <div className={`lg:col-span-5 p-8 lg:p-12 ${reversed ? "lg:order-1 lg:col-start-2" : "lg:col-start-8"}`}>
+                <h2 className="font-serif text-4xl lg:text-5xl text-forest leading-tight">{s.title}</h2>
+                <ul className="mt-8 space-y-3">
+                  {s.bullets.map((b) => (
+                    <li key={b} className="flex gap-3 text-walnut">
+                      <Check size={18} className="mt-0.5 text-olive shrink-0" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href={s.link} target="_blank" rel="noreferrer"
+                  className="mt-10 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-forest text-cream text-sm hover:bg-olive transition-colors">
+                  Bezoek de website <ArrowUpRight size={16} />
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </section>
     </>
   );
