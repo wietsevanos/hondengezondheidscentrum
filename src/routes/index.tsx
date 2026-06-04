@@ -5,7 +5,7 @@ import houtenHondAsset from "@/assets/houten-hond.jpg.asset.json";
 import bottenboxBrendaAsset from "@/assets/bottenbox-brenda.jpg.asset.json";
 import grooming from "@/assets/grooming.jpg";
 import bottenboxAsset from "@/assets/bottenbox-poster.jpg.asset.json";
-import brendaAsset from "@/assets/brenda-portrait.jpg.asset.json";
+import brendaAsset from "@/assets/brenda-portrait-new.jpg.asset.json";
 import storeInteriorAsset from "@/assets/store-brenda-front.jpg.asset.json";
 import lifestyleWalkAsset from "@/assets/lifestyle-treat.jpg.asset.json";
 import bottenboxGiant from "@/assets/bottenbox-giant.jpg.asset.json";
