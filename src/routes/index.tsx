@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroDogAsset from "@/assets/hero-puppy-box.png.asset.json";
 import naturalFoodAsset from "@/assets/natural-chews.jpg.asset.json";
+import houtenHondAsset from "@/assets/houten-hond.jpg.asset.json";
+import bottenboxLogoAsset from "@/assets/bottenbox-logo.svg.asset.json";
 import grooming from "@/assets/grooming.jpg";
 import bottenboxAsset from "@/assets/bottenbox-poster.jpg.asset.json";
 import brendaAsset from "@/assets/brenda-portrait.jpg.asset.json";
@@ -12,6 +14,8 @@ import bottenboxMini from "@/assets/bottenbox-mini.jpg.asset.json";
 import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg.asset.json";
 const heroDog = heroDogAsset.url;
 const naturalFood = naturalFoodAsset.url;
+const houtenHond = houtenHondAsset.url;
+const bottenboxLogo = bottenboxLogoAsset.url;
 const bottenbox = bottenboxAsset.url;
 const brenda = brendaAsset.url;
 const storeInterior = storeInteriorAsset.url;
@@ -118,7 +122,7 @@ function HomePage() {
             target="_blank" rel="noreferrer"
             className="group lg:col-span-7 lg:row-span-2 relative rounded-3xl overflow-hidden bg-olive min-h-[520px]"
           >
-            <img src={naturalFood} alt="Natuurlijke hondenvoeding van De Houten Hond" loading="lazy" width={1080} height={1600}
+            <img src={houtenHond} alt="De Houten Hond, houten wolfsculptuur" loading="lazy" width={1080} height={1600}
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/40 to-transparent" />
             <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-between">
@@ -158,12 +162,13 @@ function HomePage() {
           <a
             href="https://bottenbox.nl/"
             target="_blank" rel="noreferrer"
-            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-terracotta/90 min-h-[250px]"
+            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-terracotta min-h-[250px]"
           >
-            <img src={bottenbox} alt="Bottenbox kauwproducten" loading="lazy" width={1080} height={1600}
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
-            <div className="absolute inset-0 bg-gradient-to-t from-walnut/85 via-walnut/30 to-transparent" />
-            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+            <div className="absolute inset-0 flex items-center justify-center p-10">
+              <img src={bottenboxLogo} alt="Bottenbox logo" loading="lazy"
+                className="max-h-[60%] max-w-[55%] object-contain opacity-95 group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
+            </div>
+            <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-walnut/80 to-transparent">
               <p className="eyebrow text-cream/80">03, Natuurlijke kauw</p>
               <h3 className="font-serif text-3xl lg:text-4xl text-cream mt-2">Bottenbox.nl</h3>
               <span className="mt-3 inline-flex items-center gap-2 text-cream/90 text-sm">
