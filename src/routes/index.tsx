@@ -162,13 +162,12 @@ function HomePage() {
           <a
             href="https://bottenbox.nl/"
             target="_blank" rel="noreferrer"
-            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-terracotta min-h-[250px]"
+            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-terracotta/90 min-h-[250px]"
           >
-            <div className="absolute inset-0 flex items-center justify-center p-10">
-              <img src={bottenboxLogo} alt="Bottenbox logo" loading="lazy"
-                className="max-h-[60%] max-w-[55%] object-contain opacity-95 group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
-            </div>
-            <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-walnut/80 to-transparent">
+            <img src={bottenboxBrenda} alt="Bottenbox kauwproducten met Brenda en hond" loading="lazy" width={1080} height={1080}
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
+            <div className="absolute inset-0 bg-gradient-to-t from-walnut/85 via-walnut/30 to-transparent" />
+            <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <p className="eyebrow text-cream/80">03, Natuurlijke kauw</p>
               <h3 className="font-serif text-3xl lg:text-4xl text-cream mt-2">Bottenbox.nl</h3>
               <span className="mt-3 inline-flex items-center gap-2 text-cream/90 text-sm">
