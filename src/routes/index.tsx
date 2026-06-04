@@ -265,12 +265,20 @@ function HomePage() {
 
         <div className="container-x py-24 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 relative">
-            <img
-              src={lifestyleWalk}
-              alt="Wandelen met de hond in de duinen bij Haarlem"
-              loading="lazy" width={1920} height={1080}
-              className="rounded-3xl aspect-[4/5] object-cover w-full shadow-2xl shadow-forest/10"
-            />
+            <div className="grid grid-cols-5 gap-4">
+              <img
+                src={lifestyleWalk}
+                alt="Wandelen met de hond in de duinen bij Haarlem"
+                loading="lazy" width={1920} height={1080}
+                className="col-span-3 rounded-3xl aspect-[3/4] object-cover w-full shadow-2xl shadow-forest/10"
+              />
+              <img
+                src={posterZon.url}
+                alt="Meer zon is meer energie"
+                loading="lazy" width={900} height={1200}
+                className="col-span-2 rounded-3xl aspect-[3/4] object-cover w-full self-end"
+              />
+            </div>
             <div className="hidden lg:block absolute -right-8 -bottom-8 bg-cream rounded-2xl px-6 py-5 shadow-xl max-w-xs">
               <p className="eyebrow text-terracotta mb-2">Natuurlijke aanpak</p>
               <p className="text-sm text-walnut leading-relaxed">
