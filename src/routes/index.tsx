@@ -159,7 +159,7 @@ function HomePage() {
             target="_blank" rel="noreferrer"
             className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-terracotta/90 min-h-[250px]"
           >
-            <img src={bottenbox} alt="Bottenbox kauwproducten" loading="lazy" width={1080} height={1600}
+            <img src={bottenboxBoard.url} alt="Variatie aan natuurlijke kauwproducten van Bottenbox" loading="lazy" width={1080} height={1600}
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-walnut/85 via-walnut/30 to-transparent" />
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
