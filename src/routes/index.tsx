@@ -6,6 +6,10 @@ import bottenbox from "@/assets/bottenbox.jpg";
 import brenda from "@/assets/brenda.jpg";
 import storeInterior from "@/assets/store-interior.jpg";
 import lifestyleWalk from "@/assets/lifestyle-walk.jpg";
+import bottenboxGiant from "@/assets/bottenbox-giant.jpg.asset.json";
+import bottenboxClassic from "@/assets/bottenbox-classic.jpg.asset.json";
+import bottenboxMini from "@/assets/bottenbox-mini.jpg.asset.json";
+import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg.asset.json";
 import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
 
 export const Route = createFileRoute("/")({
