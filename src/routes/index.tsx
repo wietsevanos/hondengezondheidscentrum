@@ -11,7 +11,7 @@ import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hondengezondheidscentrum — Premium hondenwelzijn in Haarlem" },
+      { title: "Hondengezondheidscentrum, Premium hondenwelzijn in Haarlem" },
       { name: "description", content: "Natuurlijke voeding, professionele trimsalon en zorgvuldig samengestelde kauwboxen. Eén ecosysteem voor de gezondheid van jouw hond." },
       { property: "og:title", content: "Hondengezondheidscentrum Haarlem" },
       { property: "og:description", content: "Premium ecosysteem voor hondenwelzijn aan de Ramplaan in Haarlem." },
@@ -40,7 +40,7 @@ function HomePage() {
               Wellness voor <em className="text-sage-soft">elke hond.</em>
             </h1>
             <p className="mt-6 max-w-xl text-cream/85 text-lg leading-relaxed fade-up">
-              Natuurlijke voeding, deskundige verzorging en zorgvuldig geselecteerde producten —
+              Natuurlijke voeding, deskundige verzorging en zorgvuldig geselecteerde producten ,
               verenigd in één premium ecosysteem voor hondenwelzijn.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 fade-up">
@@ -92,17 +92,17 @@ function HomePage() {
         <div className="lg:col-span-6 lg:col-start-7">
           <p className="text-lg text-walnut/80 leading-relaxed">
             Onder één dak vind je natuurlijke voeding, een deskundige trimsalon en
-            zorgvuldig samengestelde kauwboxen. Geen losse winkels — maar een
+            zorgvuldig samengestelde kauwboxen. Geen losse winkels, maar een
             doorlopende zorg voor de gezondheid, vacht en het welzijn van je hond,
             opgebouwd uit jarenlange ervaring en oprechte aandacht.
           </p>
         </div>
       </section>
 
-      {/* THE THREE BRANDS — asymmetric editorial */}
+      {/* THE THREE BRANDS, asymmetric editorial */}
       <section className="container-x mt-20">
         <div className="grid lg:grid-cols-12 gap-6">
-          {/* Card 1 — large left */}
+          {/* Card 1, large left */}
           <a
             href="https://www.dehoutenhond.nl/"
             target="_blank" rel="noreferrer"
@@ -112,12 +112,12 @@ function HomePage() {
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/40 to-transparent" />
             <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-between">
-              <p className="eyebrow text-sage-soft">01 — Voeding & wellness</p>
+              <p className="eyebrow text-sage-soft">01, Voeding & wellness</p>
               <div>
                 <h3 className="font-serif text-4xl lg:text-6xl text-cream leading-tight">De Houten Hond</h3>
                 <p className="mt-4 max-w-md text-cream/85">
                   Natuurlijke hondenvoeding, supplementen en wellness producten met
-                  een eerlijke samenstelling — geselecteerd door experts.
+                  een eerlijke samenstelling, geselecteerd door experts.
                 </p>
                 <span className="mt-6 inline-flex items-center gap-2 text-cream text-sm">
                   Bezoek dehoutenhond.nl <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -126,7 +126,7 @@ function HomePage() {
             </div>
           </a>
 
-          {/* Card 2 — top right */}
+          {/* Card 2, top right */}
           <a
             href="https://www.elswouthondentrimsalon.nl/"
             target="_blank" rel="noreferrer"
@@ -136,7 +136,7 @@ function HomePage() {
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-walnut/85 via-walnut/30 to-transparent" />
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
-              <p className="eyebrow text-cream/80">02 — Trimsalon</p>
+              <p className="eyebrow text-cream/80">02, Trimsalon</p>
               <h3 className="font-serif text-3xl lg:text-4xl text-cream mt-2">Hondentrimsalon Elswout</h3>
               <span className="mt-3 inline-flex items-center gap-2 text-cream/90 text-sm">
                 Vacht- & huidverzorging <ArrowUpRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -144,7 +144,7 @@ function HomePage() {
             </div>
           </a>
 
-          {/* Card 3 — bottom right */}
+          {/* Card 3, bottom right */}
           <a
             href="https://bottenbox.nl/"
             target="_blank" rel="noreferrer"
@@ -154,7 +154,7 @@ function HomePage() {
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-walnut/85 via-walnut/30 to-transparent" />
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
-              <p className="eyebrow text-cream/80">03 — Natuurlijke kauw</p>
+              <p className="eyebrow text-cream/80">03, Natuurlijke kauw</p>
               <h3 className="font-serif text-3xl lg:text-4xl text-cream mt-2">Bottenbox.nl</h3>
               <span className="mt-3 inline-flex items-center gap-2 text-cream/90 text-sm">
                 Kauwproducten & boxen <ArrowUpRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -164,7 +164,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* PHILOSOPHY — sage colored band */}
+      {/* PHILOSOPHY, sage colored band */}
       <section className="mt-32 bg-sage-soft/50">
         <div className="container-x py-24 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 relative">
@@ -177,7 +177,7 @@ function HomePage() {
             <div className="hidden lg:block absolute -right-8 -bottom-8 bg-cream rounded-2xl px-6 py-5 shadow-xl max-w-xs">
               <p className="eyebrow text-terracotta mb-2">Natuurlijke aanpak</p>
               <p className="text-sm text-walnut leading-relaxed">
-                Voeding, beweging en verzorging — in balans afgestemd op
+                Voeding, beweging en verzorging, in balans afgestemd op
                 jouw hond.
               </p>
             </div>
@@ -189,7 +189,7 @@ function HomePage() {
             </h2>
             <p className="mt-6 text-walnut/80 text-lg leading-relaxed">
               Wij geloven dat échte zorg verder gaat dan een product op een schap.
-              Het begint bij luisteren — naar de eigenaar én de hond — en eindigt
+              Het begint bij luisteren, naar de eigenaar én de hond, en eindigt
               bij oprechte begeleiding. Van voedingsadvies tot vachtverzorging,
               alles is verbonden.
             </p>
@@ -219,11 +219,11 @@ function HomePage() {
           <p className="mt-6 text-walnut/80 text-lg leading-relaxed max-w-xl">
             Jarenlange ervaring als dierenartsassistente bij Nico Kas, gecombineerd
             met een diepe passie voor hondenwelzijn. Brenda volgt voortdurend
-            seminars en specialisatiecursussen — om de meest natuurlijke en
+            seminars en specialisatiecursussen, om de meest natuurlijke en
             doordachte aanpak te bieden voor voeding, verzorging en gezondheid.
           </p>
           <blockquote className="mt-10 border-l-2 border-terracotta pl-6 font-serif text-2xl lg:text-3xl text-forest italic max-w-lg">
-            “Honden vertellen het zelf — als je goed luistert, weet je precies wat ze nodig hebben.”
+            “Honden vertellen het zelf, als je goed luistert, weet je precies wat ze nodig hebben.”
           </blockquote>
           <Link to="/visie" className="inline-flex items-center gap-2 mt-10 px-6 py-3 rounded-full bg-forest text-cream text-sm">
             Lees ons volledige verhaal <ArrowUpRight size={16} />
@@ -276,7 +276,7 @@ function HomePage() {
             <div>
               <p className="eyebrow text-sage-soft mb-5">Klaar voor de volgende stap?</p>
               <h2 className="font-serif text-4xl lg:text-6xl leading-[1.05]">
-                Kom langs, plan een afspraak — of stuur ons een bericht.
+                Kom langs, plan een afspraak, of stuur ons een bericht.
               </h2>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">

@@ -6,7 +6,7 @@ import storeInterior from "@/assets/store-interior.jpg";
 export const Route = createFileRoute("/visie")({
   head: () => ({
     meta: [
-      { title: "Onze Visie — Hondengezondheidscentrum Haarlem" },
+      { title: "Onze Visie, Hondengezondheidscentrum Haarlem" },
       { name: "description", content: "Het verhaal van Brenda van der Vaart en de natuurlijke filosofie achter het Hondengezondheidscentrum in Haarlem." },
       { property: "og:title", content: "Onze visie op hondenwelzijn" },
       { property: "og:description", content: "Een natuurlijke, deskundige en persoonlijke aanpak voor elke hond." },
@@ -27,7 +27,7 @@ function VisiePage() {
           </h1>
           <p className="mt-8 text-lg text-walnut/80 leading-relaxed max-w-xl">
             Wij geloven dat ieder hond gezien en gehoord moet worden. Onze aanpak
-            is natuurlijk, deskundig en persoonlijk — een combinatie van jarenlange
+            is natuurlijk, deskundig en persoonlijk, een combinatie van jarenlange
             ervaring, voortdurende bijscholing en oprechte liefde voor het vak.
           </p>
         </div>
@@ -58,7 +58,7 @@ function VisiePage() {
               </p>
               <p>
                 Door voortdurend seminars en specialisatiecursussen te volgen,
-                blijft die expertise scherp en up-to-date. Geen losse adviezen —
+                blijft die expertise scherp en up-to-date. Geen losse adviezen ,
                 maar een doorlopende relatie waarin je hond echt centraal staat.
               </p>
               <p>
@@ -78,9 +78,9 @@ function VisiePage() {
         <div className="mt-14 grid md:grid-cols-2 gap-px bg-border rounded-3xl overflow-hidden">
           {[
             { n: "01", t: "Natuurlijk", d: "Producten met eerlijke ingrediënten, zonder onnodige toevoegingen of marketing-beloftes." },
-            { n: "02", t: "Deskundig", d: "Advies gebaseerd op kennis, ervaring en voortdurende bijscholing — niet op trends." },
+            { n: "02", t: "Deskundig", d: "Advies gebaseerd op kennis, ervaring en voortdurende bijscholing, niet op trends." },
             { n: "03", t: "Persoonlijk", d: "Elke hond is anders. Onze begeleiding sluit daar exact op aan." },
-            { n: "04", t: "Verbonden", d: "Voeding, vacht en welzijn zijn één — onze diensten ook." },
+            { n: "04", t: "Verbonden", d: "Voeding, vacht en welzijn zijn één, onze diensten ook." },
           ].map((p) => (
             <div key={p.n} className="bg-card p-10 lg:p-14">
               <p className="font-serif text-terracotta text-xl">{p.n}</p>

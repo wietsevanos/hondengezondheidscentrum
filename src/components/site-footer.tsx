@@ -25,7 +25,7 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm text-cream/80">
             <li className="flex gap-2"><MapPin size={16} className="mt-0.5 shrink-0" /> Ramplaan 48, Haarlem</li>
             <li className="flex gap-2"><Mail size={16} className="mt-0.5 shrink-0" /> info@dehoutenhond.nl</li>
-            <li className="flex gap-2"><Phone size={16} className="mt-0.5 shrink-0" /> 023 — op afspraak</li>
+            <li className="flex gap-2"><Phone size={16} className="mt-0.5 shrink-0" /> 023, op afspraak</li>
           </ul>
         </div>
         <div>
