@@ -58,16 +58,23 @@ function ReviewsPage() {
           Wat hondeneigenaren <em className="text-olive">over ons zeggen.</em>
         </h1>
 
-        <div className="mt-10 inline-flex flex-wrap items-center gap-5 rounded-2xl bg-sand px-6 py-4">
-          <GoogleG size={22} />
-          <div className="flex items-center gap-2">
-            <span className="font-serif text-2xl text-forest">4,9</span>
-            <StarRow count={5} />
+        <a
+          href="https://www.google.com/search?q=De+Houten+Hond+Haarlem+reviews"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-10 inline-flex items-center gap-4 rounded-2xl bg-card border border-border/70 pl-5 pr-6 py-4 shadow-[0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow"
+        >
+          <GoogleG size={28} />
+          <div className="h-8 w-px bg-border" />
+          <div className="flex flex-col leading-tight">
+            <span className="text-[11px] uppercase tracking-[0.18em] text-walnut/60">Google Reviews</span>
+            <div className="flex items-center gap-2 mt-1">
+              <span className="font-serif text-xl text-forest leading-none">4,9</span>
+              <StarRow count={5} />
+              <span className="text-sm text-walnut/70">({TOTAL_REVIEWS})</span>
+            </div>
           </div>
-          <span className="text-walnut/80 text-sm">
-            ({TOTAL_REVIEWS}) Google reviews
-          </span>
-        </div>
+        </a>
       </section>
 
       <section className="container-x mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
