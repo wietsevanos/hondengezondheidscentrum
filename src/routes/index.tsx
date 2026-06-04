@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroDogAsset from "@/assets/hero-puppy-box.png.asset.json";
 import naturalFoodAsset from "@/assets/natural-chews.jpg.asset.json";
+import houtenHondAsset from "@/assets/houten-hond.jpg.asset.json";
+import bottenboxLogoAsset from "@/assets/bottenbox-logo.svg.asset.json";
 import grooming from "@/assets/grooming.jpg";
 import bottenboxAsset from "@/assets/bottenbox-poster.jpg.asset.json";
 import brendaAsset from "@/assets/brenda-portrait.jpg.asset.json";
@@ -12,6 +14,8 @@ import bottenboxMini from "@/assets/bottenbox-mini.jpg.asset.json";
 import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg.asset.json";
 const heroDog = heroDogAsset.url;
 const naturalFood = naturalFoodAsset.url;
+const houtenHond = houtenHondAsset.url;
+const bottenboxLogo = bottenboxLogoAsset.url;
 const bottenbox = bottenboxAsset.url;
 const brenda = brendaAsset.url;
 const storeInterior = storeInteriorAsset.url;
