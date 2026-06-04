@@ -17,11 +17,11 @@ export const Route = createFileRoute("/contact")({
 
 const openingHours = [
   { day: "Maandag", hours: "Gesloten", closed: true },
-  { day: "Dinsdag", hours: "09:00 – 18:00" },
-  { day: "Woensdag", hours: "09:00 – 18:00" },
-  { day: "Donderdag", hours: "09:00 – 18:00" },
-  { day: "Vrijdag", hours: "09:00 – 18:00" },
-  { day: "Zaterdag", hours: "09:00 – 17:00" },
+  { day: "Dinsdag", hours: "09:00 tot 18:00" },
+  { day: "Woensdag", hours: "09:00 tot 18:00" },
+  { day: "Donderdag", hours: "09:00 tot 18:00" },
+  { day: "Vrijdag", hours: "09:00 tot 18:00" },
+  { day: "Zaterdag", hours: "09:00 tot 17:00" },
   { day: "Zondag", hours: "Gesloten", closed: true },
 ];
 
