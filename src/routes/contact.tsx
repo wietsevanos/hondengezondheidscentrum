@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import storeInterior from "@/assets/store-interior.jpg";
-import { Instagram, MapPin, Mail, Clock } from "lucide-react";
+import { Instagram, MapPin, Mail, Clock, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & winkel — Hondengezondheidscentrum Haarlem" },
+      { title: "Contact & winkel, Hondengezondheidscentrum Haarlem" },
       { name: "description", content: "Bezoek ons aan de Ramplaan 48 in Haarlem. Openingstijden, route en contactgegevens van het Hondengezondheidscentrum." },
       { property: "og:title", content: "Bezoek ons aan de Ramplaan in Haarlem" },
-      { property: "og:description", content: "Welkom in onze boutique voor hondenwelzijn — Ramplaan 48, Haarlem." },
+      { property: "og:description", content: "Welkom in onze boutique voor hondenwelzijn, Ramplaan 48, Haarlem." },
       { property: "og:image", content: storeInterior },
     ],
   }),
@@ -26,7 +26,7 @@ function ContactPage() {
           </h1>
           <p className="mt-8 text-walnut/80 text-lg leading-relaxed max-w-lg">
             Loop gerust binnen voor advies, een afspraak voor de trimsalon of
-            simpelweg om kennis te maken. Een kop koffie staat klaar — en je hond
+            simpelweg om kennis te maken. Een kop koffie staat klaar, en je hond
             is uiteraard van harte welkom.
           </p>
 
@@ -38,8 +38,8 @@ function ContactPage() {
             <div>
               <dt className="flex items-center gap-2 eyebrow text-olive mb-2"><Clock size={14} /> Openingstijden</dt>
               <dd className="text-walnut/85 leading-relaxed text-sm">
-                Di — Vr · 09:30 — 18:00<br />
-                Zaterdag · 09:30 — 17:00<br />
+                Di t/m Vr · 09:30 tot 18:00<br />
+                Zaterdag · 09:30 tot 17:00<br />
                 Trimsalon op afspraak
               </dd>
             </div>
@@ -48,8 +48,15 @@ function ContactPage() {
               <dd><a href="mailto:info@dehoutenhond.nl" className="text-forest underline underline-offset-4">info@dehoutenhond.nl</a></dd>
             </div>
             <div>
+              <dt className="flex items-center gap-2 eyebrow text-olive mb-2"><Phone size={14} /> Telefoon</dt>
+              <dd><a href="tel:0642618286" className="text-forest underline underline-offset-4">06 4261 8286</a></dd>
+            </div>
+            <div>
               <dt className="flex items-center gap-2 eyebrow text-olive mb-2"><Instagram size={14} /> Instagram</dt>
-              <dd><a href="https://www.instagram.com/dehoutenhond/" target="_blank" rel="noreferrer" className="text-forest underline underline-offset-4">@dehoutenhond</a></dd>
+              <dd className="flex flex-col gap-1">
+                <a href="https://www.instagram.com/dehoutenhond/" target="_blank" rel="noreferrer" className="text-forest underline underline-offset-4">@dehoutenhond</a>
+                <a href="https://www.instagram.com/bottenbox.nl/" target="_blank" rel="noreferrer" className="text-forest underline underline-offset-4">@bottenbox.nl</a>
+              </dd>
             </div>
           </dl>
         </div>
@@ -77,7 +84,7 @@ function ContactPage() {
               Liever even mailen?
             </h2>
             <p className="mt-4 text-cream/85">
-              Stel je vraag rustig per mail — we nemen graag de tijd om je goed
+              Stel je vraag rustig per mail, we nemen graag de tijd om je goed
               te helpen.
             </p>
             <a href="mailto:info@dehoutenhond.nl" className="mt-8 self-start inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-forest text-sm font-medium">

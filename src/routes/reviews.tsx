@@ -4,7 +4,7 @@ import { Star, Quote } from "lucide-react";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Reviews — Hondengezondheidscentrum Haarlem" },
+      { title: "Reviews, Hondengezondheidscentrum Haarlem" },
       { name: "description", content: "Ervaringen van hondeneigenaren met De Houten Hond, Hondentrimsalon Elswout en Bottenbox.nl in Haarlem." },
       { property: "og:title", content: "Wat klanten over ons zeggen" },
       { property: "og:description", content: "Lees authentieke reviews van hondeneigenaren uit Haarlem en omgeving." },
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/reviews")({
 const reviews = [
   { name: "Sanne D.", brand: "De Houten Hond", text: "Eerlijk en deskundig advies. Mijn hond eet voor het eerst écht met plezier, en haar vacht is glanzender dan ooit.", stars: 5 },
   { name: "Mark B.", brand: "Elswout", text: "De beste trimsalon waar we ooit zijn geweest. Onze hond komt rustig binnen en blij weer naar buiten.", stars: 5 },
-  { name: "Lotte v.K.", brand: "Bottenbox", text: "De boxen zijn fantastisch — kwaliteit, variatie en mooie verpakking. Een cadeautje voor onze hond én voor ons.", stars: 5 },
+  { name: "Lotte v.K.", brand: "Bottenbox", text: "De boxen zijn fantastisch, kwaliteit, variatie en mooie verpakking. Een cadeautje voor onze hond én voor ons.", stars: 5 },
   { name: "Pieter J.", brand: "De Houten Hond", text: "Brenda neemt écht de tijd. Geen verkooppraatje, maar oprecht advies waar je iets aan hebt.", stars: 5 },
   { name: "Inge M.", brand: "Elswout", text: "Vakkundig, lief en altijd persoonlijk. Onze pup is hier vanaf dag één op haar gemak.", stars: 5 },
   { name: "Tessa R.", brand: "Bottenbox", text: "Onze hond is dol op de kauwbox. Het bestelproces is soepel en de selectie is iedere keer top.", stars: 5 },

@@ -8,9 +8,9 @@ import { ArrowUpRight, Check } from "lucide-react";
 export const Route = createFileRoute("/diensten")({
   head: () => ({
     meta: [
-      { title: "Diensten — Hondengezondheidscentrum Haarlem" },
-      { name: "description", content: "Natuurlijke voeding, professionele trimsalon en kauwboxen — alle diensten van het Hondengezondheidscentrum." },
-      { property: "og:title", content: "Onze diensten — Hondengezondheidscentrum" },
+      { title: "Diensten, Hondengezondheidscentrum Haarlem" },
+      { name: "description", content: "Natuurlijke voeding, professionele trimsalon en kauwboxen, alle diensten van het Hondengezondheidscentrum." },
+      { property: "og:title", content: "Onze diensten, Hondengezondheidscentrum" },
       { property: "og:description", content: "Drie disciplines, één toewijding aan hondenwelzijn in Haarlem." },
       { property: "og:image", content: storeInterior },
     ],
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/diensten")({
 
 const services = [
   {
-    eyebrow: "01 — De Houten Hond",
+    eyebrow: "01, De Houten Hond",
     title: "Natuurlijke voeding & supplementen",
     img: naturalFood,
     accent: "bg-olive",
@@ -33,7 +33,7 @@ const services = [
     link: "https://www.dehoutenhond.nl/",
   },
   {
-    eyebrow: "02 — Elswout",
+    eyebrow: "02, Elswout",
     title: "Trimsalon voor huid & vacht",
     img: grooming,
     accent: "bg-sage",
@@ -41,12 +41,12 @@ const services = [
       "Gericht op gezonde huid en vacht",
       "Persoonlijke benadering per ras",
       "Natuurlijke verzorgingsproducten",
-      "Op afspraak — rustige omgeving",
+      "Op afspraak, rustige omgeving",
     ],
     link: "https://www.elswouthondentrimsalon.nl/",
   },
   {
-    eyebrow: "03 — Bottenbox",
+    eyebrow: "03, Bottenbox",
     title: "Natuurlijke kauwproducten",
     img: bottenbox,
     accent: "bg-terracotta",
@@ -72,7 +72,7 @@ function DienstenPage() {
         </div>
         <div className="lg:col-span-4 lg:col-start-9">
           <p className="text-walnut/80 leading-relaxed">
-            Of het nu om voeding, vachtverzorging of kauwplezier gaat — wij denken
+            Of het nu om voeding, vachtverzorging of kauwplezier gaat, wij denken
             mee. Elke discipline is verbonden met de andere, zodat jouw hond altijd
             de juiste zorg krijgt.
           </p>

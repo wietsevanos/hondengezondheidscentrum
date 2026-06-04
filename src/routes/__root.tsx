@@ -64,7 +64,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hondengezondheidscentrum Haarlem — Premium hondenwelzijn" },
+      { title: "Hondengezondheidscentrum Haarlem, Premium hondenwelzijn" },
       { name: "description", content: "Natuurlijke voeding, trimsalon en wellness producten voor jouw hond. Eén vertrouwde plek aan de Ramplaan in Haarlem." },
     ],
     links: [
