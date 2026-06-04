@@ -11,21 +11,23 @@ export function SiteFooter() {
             Alles voor de gezondheid, verzorging en het welzijn van jouw hond,
             op één vertrouwde plek in Haarlem.
           </p>
-          <a
-            href="https://www.instagram.com/dehoutenhond/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 mt-6 text-sm text-cream/80 hover:text-terracotta transition-colors"
-          >
-            <Instagram size={16} /> @dehoutenhond
-          </a>
+          <div className="flex flex-col gap-2 mt-6 text-sm">
+            <a href="https://www.instagram.com/dehoutenhond/" target="_blank" rel="noreferrer"
+              className="inline-flex items-center gap-2 text-cream/80 hover:text-terracotta transition-colors">
+              <Instagram size={16} /> @dehoutenhond
+            </a>
+            <a href="https://www.instagram.com/bottenbox.nl/" target="_blank" rel="noreferrer"
+              className="inline-flex items-center gap-2 text-cream/80 hover:text-terracotta transition-colors">
+              <Instagram size={16} /> @bottenbox.nl
+            </a>
+          </div>
         </div>
         <div>
           <p className="eyebrow text-sage-soft mb-4">Bezoek ons</p>
           <ul className="space-y-3 text-sm text-cream/80">
             <li className="flex gap-2"><MapPin size={16} className="mt-0.5 shrink-0" /> Ramplaan 48, Haarlem</li>
             <li className="flex gap-2"><Mail size={16} className="mt-0.5 shrink-0" /> info@dehoutenhond.nl</li>
-            <li className="flex gap-2"><Phone size={16} className="mt-0.5 shrink-0" /> 023, op afspraak</li>
+            <li className="flex gap-2"><Phone size={16} className="mt-0.5 shrink-0" /> <a href="tel:0642618286" className="hover:text-terracotta">06 4261 8286</a></li>
           </ul>
         </div>
         <div>

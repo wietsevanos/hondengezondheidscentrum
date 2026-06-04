@@ -38,8 +38,8 @@ function ContactPage() {
             <div>
               <dt className="flex items-center gap-2 eyebrow text-olive mb-2"><Clock size={14} /> Openingstijden</dt>
               <dd className="text-walnut/85 leading-relaxed text-sm">
-                Di, Vr · 09:30, 18:00<br />
-                Zaterdag · 09:30, 17:00<br />
+                Di t/m Vr · 09:30 tot 18:00<br />
+                Zaterdag · 09:30 tot 17:00<br />
                 Trimsalon op afspraak
               </dd>
             </div>
@@ -48,8 +48,15 @@ function ContactPage() {
               <dd><a href="mailto:info@dehoutenhond.nl" className="text-forest underline underline-offset-4">info@dehoutenhond.nl</a></dd>
             </div>
             <div>
+              <dt className="flex items-center gap-2 eyebrow text-olive mb-2"><Phone size={14} /> Telefoon</dt>
+              <dd><a href="tel:0642618286" className="text-forest underline underline-offset-4">06 4261 8286</a></dd>
+            </div>
+            <div>
               <dt className="flex items-center gap-2 eyebrow text-olive mb-2"><Instagram size={14} /> Instagram</dt>
-              <dd><a href="https://www.instagram.com/dehoutenhond/" target="_blank" rel="noreferrer" className="text-forest underline underline-offset-4">@dehoutenhond</a></dd>
+              <dd className="flex flex-col gap-1">
+                <a href="https://www.instagram.com/dehoutenhond/" target="_blank" rel="noreferrer" className="text-forest underline underline-offset-4">@dehoutenhond</a>
+                <a href="https://www.instagram.com/bottenbox.nl/" target="_blank" rel="noreferrer" className="text-forest underline underline-offset-4">@bottenbox.nl</a>
+              </dd>
             </div>
           </dl>
         </div>
