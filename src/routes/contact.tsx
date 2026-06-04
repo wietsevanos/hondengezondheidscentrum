@@ -28,58 +28,32 @@ const openingHours = [
 function ContactPage() {
   return (
     <>
-      {/* Intro + map, perfectly aligned */}
-      <section className="container-x pt-16 lg:pt-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
-        <div className="lg:col-span-6 flex flex-col">
+      {/* Intro */}
+      <section className="container-x pt-16 lg:pt-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+        <div className="lg:col-span-7">
           <p className="eyebrow text-terracotta mb-5">Contact & winkel</p>
           <h1 className="font-serif text-5xl lg:text-7xl text-forest leading-[1.02]">
             Welkom aan de <em className="text-olive">Ramplaan.</em>
           </h1>
-          <p className="mt-8 text-walnut/80 text-lg leading-relaxed max-w-lg">
+        </div>
+        <div className="lg:col-span-5">
+          <p className="text-walnut/80 text-lg leading-relaxed">
             Loop gerust binnen voor advies, een afspraak voor de trimsalon of
             simpelweg om kennis te maken. Een kop koffie staat klaar, en je hond
             is uiteraard van harte welkom.
           </p>
-
-          <div className="mt-auto pt-10">
-            <p className="eyebrow text-olive mb-3 flex items-center gap-2"><MapPin size={14} /> Adres</p>
-            <p className="font-serif text-3xl lg:text-4xl text-forest leading-snug">
-              Ramplaan 48<br />
-              <span className="text-walnut/70 text-2xl lg:text-3xl">2015 GW Haarlem</span>
-            </p>
-            <a
-              href="https://www.google.com/maps?q=Ramplaan+48,+Haarlem"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm text-forest underline underline-offset-4 hover:text-terracotta"
-            >
-              Plan je route
-            </a>
-          </div>
-        </div>
-
-        <div className="lg:col-span-6">
-          <div className="rounded-3xl overflow-hidden border border-border h-[420px] lg:h-full lg:min-h-[560px]">
-            <iframe
-              title="Locatie Hondengezondheidscentrum"
-              src="https://www.google.com/maps?q=Ramplaan+48,+Haarlem&output=embed"
-              className="w-full h-full"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
         </div>
       </section>
 
-      {/* Info grid: opening hours + contact + socials */}
-      <section className="container-x mt-20 lg:mt-28 grid lg:grid-cols-12 gap-6">
+      {/* Openingstijden + Map naast elkaar */}
+      <section className="container-x mt-16 lg:mt-24 grid lg:grid-cols-12 gap-6 items-stretch">
         {/* Opening hours */}
-        <div className="lg:col-span-6 rounded-3xl bg-sand p-8 lg:p-10">
+        <div className="lg:col-span-5 rounded-3xl bg-sand p-8 lg:p-10 flex flex-col">
           <div className="flex items-center justify-between mb-6">
             <p className="eyebrow text-olive flex items-center gap-2"><Clock size={14} /> Openingstijden</p>
             <span className="text-[11px] uppercase tracking-[0.18em] text-walnut/60">Winkel</span>
           </div>
-          <ul className="divide-y divide-border/60">
+          <ul className="divide-y divide-border/60 flex-1">
             {openingHours.map((row) => (
               <li key={row.day} className="flex items-center justify-between py-3 text-[15px]">
                 <span className="text-forest font-medium">{row.day}</span>
@@ -92,55 +66,71 @@ function ContactPage() {
           <p className="mt-6 text-xs text-walnut/60 uppercase tracking-widest">Trimsalon op afspraak</p>
         </div>
 
-        {/* Contact + Instagram */}
-        <div className="lg:col-span-6 grid sm:grid-cols-2 gap-6">
-          <a
-            href="tel:0642618286"
-            className="rounded-3xl bg-card border border-border/70 p-8 flex flex-col justify-between group hover:border-olive transition-colors"
-          >
-            <Phone size={20} className="text-olive" />
-            <div>
-              <p className="eyebrow text-olive mb-2">Telefoon</p>
-              <p className="font-serif text-2xl text-forest group-hover:text-terracotta transition-colors">06 4261 8286</p>
-            </div>
-          </a>
+        {/* Map */}
+        <div className="lg:col-span-7">
+          <div className="rounded-3xl overflow-hidden border border-border h-[420px] lg:h-full lg:min-h-[520px]">
+            <iframe
+              title="Locatie Hondengezondheidscentrum"
+              src="https://www.google.com/maps?q=Ramplaan+48,+Haarlem&output=embed"
+              className="w-full h-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
 
-          <a
-            href="mailto:info@dehoutenhond.nl"
-            className="rounded-3xl bg-card border border-border/70 p-8 flex flex-col justify-between group hover:border-olive transition-colors"
-          >
-            <Mail size={20} className="text-olive" />
-            <div>
-              <p className="eyebrow text-olive mb-2">E-mail</p>
-              <p className="font-serif text-2xl text-forest group-hover:text-terracotta transition-colors break-all">
-                info@dehoutenhond.nl
-              </p>
-            </div>
-          </a>
+      {/* Contactgegevens, typografisch, zonder vlakken */}
+      <section className="container-x mt-20 lg:mt-28">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 border-t border-border pt-12 lg:pt-16">
+          <div className="lg:col-span-4">
+            <p className="eyebrow text-olive mb-3 flex items-center gap-2"><MapPin size={14} /> Adres</p>
+            <p className="font-serif text-2xl lg:text-3xl text-forest leading-snug">
+              Ramplaan 48<br />
+              <span className="text-walnut/70">2015 GW Haarlem</span>
+            </p>
+            <a
+              href="https://www.google.com/maps?q=Ramplaan+48,+Haarlem"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm text-forest underline underline-offset-4 hover:text-terracotta"
+            >
+              Plan je route
+            </a>
+          </div>
 
-          <div className="sm:col-span-2 rounded-3xl bg-forest text-cream p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-            <div>
-              <p className="eyebrow text-sage-soft mb-2 flex items-center gap-2"><Instagram size={14} /> Volg ons</p>
-              <p className="font-serif text-2xl">Voor verhalen, nieuwe boxen en momenten uit de winkel.</p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="https://www.instagram.com/dehoutenhond/"
-                target="_blank"
-                rel="noreferrer"
-                className="px-5 py-2.5 rounded-full bg-cream/10 hover:bg-cream hover:text-forest text-sm transition-colors"
-              >
-                @dehoutenhond
-              </a>
-              <a
-                href="https://www.instagram.com/bottenbox.nl/"
-                target="_blank"
-                rel="noreferrer"
-                className="px-5 py-2.5 rounded-full bg-cream/10 hover:bg-cream hover:text-forest text-sm transition-colors"
-              >
-                @bottenbox.nl
-              </a>
-            </div>
+          <div className="lg:col-span-4">
+            <p className="eyebrow text-olive mb-3 flex items-center gap-2"><Phone size={14} /> Telefoon</p>
+            <a href="tel:0642618286" className="font-serif text-2xl lg:text-3xl text-forest hover:text-terracotta transition-colors block">
+              06 4261 8286
+            </a>
+            <p className="mt-3 text-sm text-walnut/70">Tijdens openingstijden bereikbaar.</p>
+
+            <p className="eyebrow text-olive mb-3 mt-8 flex items-center gap-2"><Mail size={14} /> E-mail</p>
+            <a href="mailto:info@dehoutenhond.nl" className="font-serif text-xl lg:text-2xl text-forest hover:text-terracotta transition-colors block break-all">
+              info@dehoutenhond.nl
+            </a>
+          </div>
+
+          <div className="lg:col-span-4">
+            <p className="eyebrow text-olive mb-3 flex items-center gap-2"><Instagram size={14} /> Instagram</p>
+            <a
+              href="https://www.instagram.com/dehoutenhond/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-serif text-2xl lg:text-3xl text-forest hover:text-terracotta transition-colors block"
+            >
+              @dehoutenhond
+            </a>
+            <a
+              href="https://www.instagram.com/bottenbox.nl/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-serif text-2xl lg:text-3xl text-forest hover:text-terracotta transition-colors block mt-2"
+            >
+              @bottenbox.nl
+            </a>
+            <p className="mt-3 text-sm text-walnut/70">Verhalen, nieuwe boxen en momenten uit de winkel.</p>
           </div>
         </div>
       </section>
