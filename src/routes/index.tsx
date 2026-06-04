@@ -41,12 +41,12 @@ function HomePage() {
             alt="Gelukkige hond in de boutique van het Hondengezondheidscentrum Haarlem"
             width={1920}
             height={1080}
-            className="w-full h-[58vh] min-h-[440px] max-h-[640px] object-cover opacity-95"
+            className="w-full h-[70vh] min-h-[520px] max-h-[760px] object-cover opacity-95"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-forest/80 via-forest/30 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-12 lg:p-16">
             <p className="eyebrow text-sage-soft mb-4 fade-up">Haarlem · sinds jaren toegewijd</p>
-            <h1 className="font-serif text-5xl sm:text-7xl lg:text-[8rem] leading-[0.95] text-cream max-w-5xl fade-up">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] text-cream max-w-5xl fade-up">
               Wellness voor <em className="text-sage-soft">elke hond.</em>
             </h1>
             <p className="mt-6 max-w-xl text-cream/85 text-lg leading-relaxed fade-up">
