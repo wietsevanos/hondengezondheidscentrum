@@ -13,6 +13,10 @@ import dogTreatHand from "@/assets/dog-treat-hand.jpg.asset.json";
 import brendaPortrait from "@/assets/brenda-portrait.jpg.asset.json";
 import brendaBox from "@/assets/brenda-box.jpg.asset.json";
 import brendaDogsBox from "@/assets/brenda-dogs-box.jpg.asset.json";
+import posterOntdek from "@/assets/poster-ontdek.jpg.asset.json";
+import posterZon from "@/assets/poster-zon.jpg.asset.json";
+import puppySnuffelpost from "@/assets/puppy-snuffelpost.png.asset.json";
+import bottenboxPuppyPromo from "@/assets/bottenbox-puppy-promo.jpg.asset.json";
 import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
 
 export const Route = createFileRoute("/")({
