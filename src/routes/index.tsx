@@ -297,8 +297,8 @@ function HomePage() {
         </div>
         <div className="lg:col-span-5 order-1 lg:order-2 relative">
           <img
-            src={brenda}
-            alt="Brenda van der Vaart in de winkel"
+            src={brendaPortrait.url}
+            alt="Brenda van der Vaart met haar honden in de winkel"
             loading="lazy" width={1080} height={1600}
             className="rounded-3xl aspect-[4/5] object-cover w-full"
           />
