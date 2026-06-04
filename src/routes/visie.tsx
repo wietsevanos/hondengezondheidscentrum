@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import brenda from "@/assets/brenda.jpg";
+import brendaAsset from "@/assets/brenda-shop-dogs.jpg.asset.json";
+const brenda = brendaAsset.url;
 import lifestyleWalkAsset from "@/assets/visie-food.jpg.asset.json";
 import storeInterior from "@/assets/store-interior.jpg";
 
