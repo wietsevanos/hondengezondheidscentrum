@@ -2,14 +2,17 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroDog from "@/assets/hero-dog.jpg";
 import naturalFood from "@/assets/natural-food.jpg";
 import grooming from "@/assets/grooming.jpg";
-import bottenbox from "@/assets/bottenbox.jpg";
-import brenda from "@/assets/brenda.jpg";
 import storeInterior from "@/assets/store-interior.jpg";
 import lifestyleWalk from "@/assets/lifestyle-walk.jpg";
 import bottenboxGiant from "@/assets/bottenbox-giant.jpg.asset.json";
 import bottenboxClassic from "@/assets/bottenbox-classic.jpg.asset.json";
 import bottenboxMini from "@/assets/bottenbox-mini.jpg.asset.json";
 import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg.asset.json";
+import bottenboxBoard from "@/assets/bottenbox-board.jpg.asset.json";
+import dogTreatHand from "@/assets/dog-treat-hand.jpg.asset.json";
+import brendaPortrait from "@/assets/brenda-portrait.jpg.asset.json";
+import brendaBox from "@/assets/brenda-box.jpg.asset.json";
+import brendaDogsBox from "@/assets/brenda-dogs-box.jpg.asset.json";
 import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -154,7 +157,7 @@ function HomePage() {
             target="_blank" rel="noreferrer"
             className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-terracotta/90 min-h-[250px]"
           >
-            <img src={bottenbox} alt="Bottenbox kauwproducten" loading="lazy" width={1080} height={1600}
+            <img src={bottenboxBoard.url} alt="Variatie aan natuurlijke kauwproducten van Bottenbox" loading="lazy" width={1080} height={1600}
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-walnut/85 via-walnut/30 to-transparent" />
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -292,8 +295,8 @@ function HomePage() {
         </div>
         <div className="lg:col-span-5 order-1 lg:order-2 relative">
           <img
-            src={brenda}
-            alt="Brenda van der Vaart in de winkel"
+            src={brendaPortrait.url}
+            alt="Brenda van der Vaart met haar honden in de winkel"
             loading="lazy" width={1080} height={1600}
             className="rounded-3xl aspect-[4/5] object-cover w-full"
           />
@@ -304,27 +307,53 @@ function HomePage() {
         </div>
       </section>
 
-      {/* STORE INTERIOR FULL-BLEED */}
-      <section className="mt-32">
-        <div className="container-x">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
-            <div>
-              <p className="eyebrow text-olive mb-4">De winkel</p>
-              <h2 className="font-serif text-5xl lg:text-6xl text-forest max-w-2xl leading-[1.05]">
-                Een plek waar je <em className="text-terracotta">graag binnenstapt.</em>
-              </h2>
-            </div>
-            <Link to="/contact" className="inline-flex items-center gap-2 text-sm text-forest border-b border-forest/30 pb-1 self-start">
-              Bezoek ons aan de Ramplaan <ArrowUpRight size={16} />
-            </Link>
+      {/* SFEERIMPRESSIE — gallery */}
+      <section className="container-x mt-32">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+          <div>
+            <p className="eyebrow text-olive mb-4">Sfeerimpressie</p>
+            <h2 className="font-serif text-5xl lg:text-6xl text-forest max-w-2xl leading-[1.05]">
+              Een plek waar je <em className="text-terracotta">graag binnenstapt.</em>
+            </h2>
+          </div>
+          <Link to="/contact" className="inline-flex items-center gap-2 text-sm text-forest border-b border-forest/30 pb-1 self-start">
+            Bezoek ons aan de Ramplaan <ArrowUpRight size={16} />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-12 gap-4 lg:gap-5">
+          <div className="col-span-12 lg:col-span-7 rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:row-span-2">
+            <img
+              src={brendaDogsBox.url}
+              alt="Brenda toont een Bottenbox aan haar twee honden"
+              loading="lazy" width={1280} height={1600}
+              className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-[1.2s] ease-out"
+            />
+          </div>
+          <div className="col-span-6 lg:col-span-5 rounded-3xl overflow-hidden aspect-square">
+            <img
+              src={brendaBox.url}
+              alt="Brenda met een Bottenbox in de winkel"
+              loading="lazy" width={1080} height={1080}
+              className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-[1.2s] ease-out"
+            />
+          </div>
+          <div className="col-span-6 lg:col-span-5 rounded-3xl overflow-hidden aspect-square">
+            <img
+              src={dogTreatHand.url}
+              alt="Hond geniet van een natuurlijke snack uit de hand"
+              loading="lazy" width={1080} height={1080}
+              className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-[1.2s] ease-out"
+            />
           </div>
         </div>
-        <div className="relative overflow-hidden">
+
+        <div className="relative overflow-hidden rounded-3xl mt-5">
           <img
             src={storeInterior}
             alt="Interieur van de boutique aan de Ramplaan Haarlem"
             loading="lazy" width={1920} height={1080}
-            className="w-full h-[60vh] min-h-[420px] object-cover"
+            className="w-full h-[50vh] min-h-[360px] object-cover"
           />
         </div>
       </section>
