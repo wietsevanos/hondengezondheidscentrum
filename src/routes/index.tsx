@@ -195,12 +195,12 @@ function HomePage() {
           ].map((b) => (
             <article key={b.name} className={`group rounded-3xl overflow-hidden ${b.bg} ${b.text} flex flex-col`}>
               <div className="p-4">
-                <div className="overflow-hidden rounded-2xl bg-black/5">
+                <div className="overflow-hidden rounded-2xl bg-black/5 aspect-square">
                   <img
                     src={b.img}
                     alt={b.name}
                     loading="lazy"
-                    className="w-full object-contain group-hover:scale-[1.04] transition-transform duration-[1.2s] ease-out"
+                    className="w-full h-full object-contain group-hover:scale-[1.04] transition-transform duration-[1.2s] ease-out"
                   />
                 </div>
               </div>
