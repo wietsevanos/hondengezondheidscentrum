@@ -31,7 +31,7 @@ function HomePage() {
             alt="Gelukkige hond in de boutique van het Hondengezondheidscentrum Haarlem"
             width={1920}
             height={1080}
-            className="w-full h-[78vh] min-h-[560px] object-cover opacity-95"
+            className="w-full h-[58vh] min-h-[440px] max-h-[640px] object-cover opacity-95"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-forest/80 via-forest/30 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-12 lg:p-16">
