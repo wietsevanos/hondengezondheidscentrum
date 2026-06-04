@@ -1,15 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroDog from "@/assets/hero-dog.jpg";
-import naturalFood from "@/assets/natural-food.jpg";
+import heroDogAsset from "@/assets/hero-puppy-box.png.asset.json";
+import naturalFoodAsset from "@/assets/natural-chews.jpg.asset.json";
 import grooming from "@/assets/grooming.jpg";
-import bottenbox from "@/assets/bottenbox.jpg";
-import brenda from "@/assets/brenda.jpg";
-import storeInterior from "@/assets/store-interior.jpg";
-import lifestyleWalk from "@/assets/lifestyle-walk.jpg";
+import bottenboxAsset from "@/assets/bottenbox-poster.jpg.asset.json";
+import brendaAsset from "@/assets/brenda-portrait.jpg.asset.json";
+import storeInteriorAsset from "@/assets/store-brenda-dogs.jpg.asset.json";
+import lifestyleWalkAsset from "@/assets/lifestyle-treat.jpg.asset.json";
 import bottenboxGiant from "@/assets/bottenbox-giant.jpg.asset.json";
 import bottenboxClassic from "@/assets/bottenbox-classic.jpg.asset.json";
 import bottenboxMini from "@/assets/bottenbox-mini.jpg.asset.json";
 import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg.asset.json";
+const heroDog = heroDogAsset.url;
+const naturalFood = naturalFoodAsset.url;
+const bottenbox = bottenboxAsset.url;
+const brenda = brendaAsset.url;
+const storeInterior = storeInteriorAsset.url;
+const lifestyleWalk = lifestyleWalkAsset.url;
 import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
 
 export const Route = createFileRoute("/")({
