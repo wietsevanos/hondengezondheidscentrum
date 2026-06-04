@@ -15,7 +15,7 @@ import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg.asset.json";
 const heroDog = heroDogAsset.url;
 const naturalFood = naturalFoodAsset.url;
 const houtenHond = houtenHondAsset.url;
-const bottenboxLogo = bottenboxLogoAsset.url;
+const bottenboxBrenda = bottenboxBrendaAsset.url;
 const bottenbox = bottenboxAsset.url;
 const brenda = brendaAsset.url;
 const storeInterior = storeInteriorAsset.url;
