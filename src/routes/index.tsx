@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroDogAsset from "@/assets/hero-puppy-box.png.asset.json";
+import heroDogAsset from "@/assets/frontpage-dog.jpg.asset.json";
 import naturalFoodAsset from "@/assets/natural-chews.jpg.asset.json";
 import houtenHondAsset from "@/assets/houten-hond.jpg.asset.json";
 import bottenboxBrendaAsset from "@/assets/bottenbox-brenda.jpg.asset.json";

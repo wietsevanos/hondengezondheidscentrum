@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import brenda from "@/assets/brenda.jpg";
-import lifestyleWalk from "@/assets/lifestyle-walk.jpg";
+import lifestyleWalkAsset from "@/assets/visie-food.jpg.asset.json";
 import storeInterior from "@/assets/store-interior.jpg";
+
+const lifestyleWalk = lifestyleWalkAsset.url;
+
 
 export const Route = createFileRoute("/visie")({
   head: () => ({
