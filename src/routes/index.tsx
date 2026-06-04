@@ -122,7 +122,7 @@ function HomePage() {
             target="_blank" rel="noreferrer"
             className="group lg:col-span-7 lg:row-span-2 relative rounded-3xl overflow-hidden bg-olive min-h-[520px]"
           >
-            <img src={naturalFood} alt="Natuurlijke hondenvoeding van De Houten Hond" loading="lazy" width={1080} height={1600}
+            <img src={houtenHond} alt="De Houten Hond, houten wolfsculptuur" loading="lazy" width={1080} height={1600}
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/40 to-transparent" />
             <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-between">
