@@ -2,8 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroDog from "@/assets/hero-dog.jpg";
 import naturalFood from "@/assets/natural-food.jpg";
 import grooming from "@/assets/grooming.jpg";
-import bottenbox from "@/assets/bottenbox.jpg";
-import brenda from "@/assets/brenda.jpg";
 import storeInterior from "@/assets/store-interior.jpg";
 import lifestyleWalk from "@/assets/lifestyle-walk.jpg";
 import bottenboxGiant from "@/assets/bottenbox-giant.jpg.asset.json";
