@@ -193,6 +193,35 @@ function HomePage() {
           </div>
         </div>
 
+        {/* Lifestyle / promo band */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+          <div className="rounded-3xl overflow-hidden aspect-[3/4]">
+            <img
+              src={posterOntdek.url}
+              alt="Ontdek jouw ideale Bottenbox"
+              loading="lazy" width={900} height={1200}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="rounded-3xl overflow-hidden aspect-[3/4] bg-sand">
+            <img
+              src={puppySnuffelpost.url}
+              alt="Golden retriever puppy met een Snuffelpost box"
+              loading="lazy" width={900} height={1200}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="rounded-3xl overflow-hidden aspect-[3/4]">
+            <img
+              src={bottenboxPuppyPromo.url}
+              alt="Twee puppies snuffelen aan een geopende Bottenbox Puppy"
+              loading="lazy" width={900} height={1200}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
             { img: bottenboxPuppy.url, name: "Bottenbox Puppy", tag: "Voor jonge honden", desc: "Zachte kauwbotten en puppy vriendelijke snacks, perfect voor melktandjes.", bg: "bg-[#b88a3e]", text: "text-cream" },
