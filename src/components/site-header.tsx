@@ -18,7 +18,7 @@ export function SiteHeader() {
       <div className="container-x flex items-center justify-between h-14 lg:h-20">
         <Link to="/" className="flex items-center gap-2 lg:gap-3 group min-w-0">
           <img src={logoHgc.url} alt="Hondengezondheidscentrum logo" className="h-8 lg:h-11 w-auto shrink-0" />
-          <span className="font-serif text-[15px] sm:text-lg lg:text-2xl text-forest tracking-tight leading-tight truncate">
+          <span className="hidden sm:inline font-serif text-lg lg:text-2xl text-forest tracking-tight leading-tight truncate">
             Hondengezondheidscentrum
           </span>
         </Link>
