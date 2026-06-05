@@ -203,14 +203,28 @@ function HomePage() {
             { img: bottenboxClassic.url, name: "Bottenbox Classic", tag: "Voor middelgrote honden", desc: "Een uitgebalanceerde mix van natuurlijke kauwbotten en gezonde snacks.", bg: "bg-[#c89b8a]", text: "text-cream" },
             { img: bottenboxGiant.url, name: "Bottenbox Giant", tag: "Voor grote honden", desc: "Extra grote porties, stevige kauwbotten en robuuste snacks voor krachtige kaken.", bg: "bg-[#6b4a32]", text: "text-cream" },
           ].map((b) => (
-            <article key={b.name} className={`group rounded-2xl overflow-hidden ${b.bg} p-3`}>
-              <div className="overflow-hidden rounded-xl w-full aspect-[3/4]">
+            <article
+              key={b.name}
+              className={`group relative rounded-2xl overflow-hidden ${b.bg} p-3 cursor-pointer transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.25)]`}
+            >
+              <div className="overflow-hidden rounded-xl w-full aspect-[3/4] relative">
                 <img
                   src={b.img}
                   alt={b.name}
                   loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[1.2s] ease-out"
+                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
                 />
+                {/* Premium gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Content that slides up on hover */}
+                <div className="absolute inset-x-0 bottom-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                  <p className={`text-xs uppercase tracking-widest ${b.text} opacity-80 mb-1`}>{b.tag}</p>
+                  <h3 className={`font-serif text-xl lg:text-2xl ${b.text} leading-tight`}>{b.name}</h3>
+                  <p className={`text-sm ${b.text} opacity-80 mt-2 leading-relaxed line-clamp-2`}>{b.desc}</p>
+                  <span className={`inline-flex items-center gap-1.5 text-xs ${b.text} mt-3 font-medium`}>
+                    Ontdek meer <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
+                </div>
               </div>
             </article>
           ))}
