@@ -4,12 +4,12 @@ import logoHgc from "@/assets/logo-hgc.png.asset.json";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-forest text-cream/90 mt-32">
-      <div className="container-x py-20 grid gap-12 md:grid-cols-4">
+    <footer className="bg-forest text-cream/90 mt-20 lg:mt-32">
+      <div className="container-x py-10 lg:py-20 grid gap-8 md:gap-12 md:grid-cols-4">
         <div className="md:col-span-2 max-w-md">
-          <div className="flex items-center gap-3 mb-4">
-            <img src={logoHgc.url} alt="" className="h-12 w-auto bg-cream rounded-md p-1.5" />
-            <h3 className="font-serif text-3xl text-cream">Hondengezondheidscentrum</h3>
+          <div className="flex items-center gap-3 mb-3 lg:mb-4">
+            <img src={logoHgc.url} alt="" className="h-9 lg:h-12 w-auto bg-cream rounded-md p-1.5 shrink-0" />
+            <h3 className="font-serif text-xl lg:text-3xl text-cream leading-tight">Hondengezondheidscentrum</h3>
           </div>
           <p className="text-cream/70 leading-relaxed text-sm">
             Alles voor de gezondheid, verzorging en het welzijn van jouw hond,
