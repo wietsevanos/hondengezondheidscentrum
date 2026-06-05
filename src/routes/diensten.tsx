@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import houtenHond from "@/assets/houten-hond-storefront.jpg.asset.json";
-import grooming from "@/assets/grooming.jpg";
+import grooming from "@/assets/elswout-dog.jpg.asset.json";
 import bottenbox from "@/assets/bottenbox-chews.jpg.asset.json";
 import storeInterior from "@/assets/store-interior.jpg";
 import { ArrowUpRight, Check } from "lucide-react";
