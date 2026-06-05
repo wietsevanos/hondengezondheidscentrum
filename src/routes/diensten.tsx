@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import houtenHond from "@/assets/houten-hond-storefront.jpg.asset.json";
 import grooming from "@/assets/grooming.jpg";
-import bottenbox from "@/assets/bottenbox.jpg";
+import bottenbox from "@/assets/bottenbox-chews.jpg.asset.json";
 import storeInterior from "@/assets/store-interior.jpg";
 import { ArrowUpRight, Check } from "lucide-react";
 
@@ -48,7 +48,7 @@ const services = [
   {
     eyebrow: "03, Bottenbox",
     title: "Natuurlijke kauwproducten",
-    img: bottenbox,
+    img: bottenbox.url,
     accent: "bg-terracotta",
     bullets: [
       "Zorgvuldig samengestelde boxen",
