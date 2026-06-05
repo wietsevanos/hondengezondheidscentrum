@@ -216,6 +216,9 @@
   .min-h-\[420px\] { min-height: 260px; }
   .min-h-\[250px\] { min-height: 200px; }
 
+  /* Bottenbox-kaarten 2 kolommen op mobiel ipv 1 */
+  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+
   /* Footer marge boven verkleinen */
   footer.mt-32 { margin-top: 3rem; }
 }
