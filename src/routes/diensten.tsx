@@ -48,7 +48,7 @@ const services = [
   {
     eyebrow: "03, Bottenbox",
     title: "Natuurlijke kauwproducten",
-    img: bottenbox,
+    img: bottenbox.url,
     accent: "bg-terracotta",
     bullets: [
       "Zorgvuldig samengestelde boxen",
