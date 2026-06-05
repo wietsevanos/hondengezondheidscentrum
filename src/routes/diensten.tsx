@@ -33,9 +33,9 @@ const services = [
     link: "https://www.dehoutenhond.nl/",
   },
   {
-    eyebrow: "02, Elswout",
+    eyebrow: "02, Hondentrimsalon Elswout",
     title: "Trimsalon voor huid & vacht",
-    img: grooming,
+    img: grooming.url,
     accent: "bg-sage",
     bullets: [
       "Gericht op gezonde huid en vacht",
