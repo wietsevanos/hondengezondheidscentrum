@@ -18,9 +18,8 @@ export function SiteHeader() {
       <div className="container-x flex items-center justify-between h-14 lg:h-20">
         <Link to="/" className="flex items-center gap-2 lg:gap-3 group min-w-0">
           <img src={logoHgc.url} alt="Hondengezondheidscentrum logo" className="h-8 lg:h-11 w-auto shrink-0" />
-          <span className="font-serif text-base sm:text-lg lg:text-2xl text-forest tracking-tight truncate">
-            <span className="sm:hidden">HGC Haarlem</span>
-            <span className="hidden sm:inline">Hondengezondheidscentrum</span>
+          <span className="font-serif text-[15px] sm:text-lg lg:text-2xl text-forest tracking-tight leading-tight truncate">
+            Hondengezondheidscentrum
           </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-10">
