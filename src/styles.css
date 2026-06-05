@@ -179,15 +179,25 @@
   h3.font-serif { font-size: 1.25rem; line-height: 1.2; }
 
   /* Hero/landing afmetingen comprimeren */
-  section img.h-\[70vh\] { height: 60vh; min-height: 0; max-height: 70vh; }
-  section img.h-\[60vh\] { height: 42vh; min-height: 0; }
+  section img.h-\[70vh\] { height: 56vh; min-height: 0; max-height: 62vh; }
+  section img.h-\[60vh\] { height: 40vh; min-height: 0; }
 
   /* Hero overlay padding kleiner + knoppen compacter */
-  section .absolute.inset-0.flex.flex-col { padding: 1.25rem; }
-  section a.px-6.py-3\.5 { padding: 0.6rem 1rem; font-size: 0.8rem; }
-  section a.px-6.py-4 { padding: 0.65rem 1.1rem; font-size: 0.8rem; }
-  section .mt-8.flex.flex-wrap.gap-3 { gap: 0.5rem; margin-top: 1rem; }
-  section h1.font-serif + p { margin-top: 0.75rem; font-size: 0.95rem; }
+  section .absolute.inset-0.flex.flex-col { padding: 1.1rem; }
+  section a.px-6.py-3\.5 { padding: 0.55rem 0.95rem; font-size: 0.78rem; }
+  section a.px-6.py-4 { padding: 0.6rem 1rem; font-size: 0.78rem; }
+  section .mt-8.flex.flex-wrap.gap-3 { gap: 0.4rem; margin-top: 0.85rem; }
+  section h1.font-serif + p { margin-top: 0.6rem; font-size: 0.9rem; line-height: 1.45; }
+
+  /* Hero heading nog iets compacter */
+  section h1.font-serif { font-size: 2rem; }
+
+  /* Eyebrow op mobiel kleiner */
+  .eyebrow { font-size: 0.62rem; letter-spacing: 0.18em; }
+
+  /* Body p iets kleiner standaard */
+  p { font-size: 0.92rem; }
+  p.text-lg { font-size: 0.95rem; line-height: 1.5; }
 
   /* Verticale ritme: grote mt-* secties dichter op elkaar */
   .mt-32 { margin-top: 3.25rem; }
