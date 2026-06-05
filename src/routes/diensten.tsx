@@ -108,8 +108,8 @@ function DienstenPage() {
                   <div className="mt-4 h-px w-10 bg-walnut/25" />
                   <ul className="mt-5 space-y-2.5">
                     {s.bullets.map((b) => (
-                      <li key={b} className="flex gap-3 text-walnut/85 text-[15px] leading-relaxed">
-                        <Check size={16} className="mt-1 text-olive shrink-0" />
+                      <li key={b} className="flex gap-3 text-walnut/85 text-[14px] leading-snug">
+                        <Check size={15} className="mt-0.5 text-olive shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}
@@ -119,7 +119,7 @@ function DienstenPage() {
                   href={s.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-10 inline-flex items-center justify-between gap-3 text-forest text-sm uppercase tracking-[0.18em] border-b border-forest/30 pb-3 w-full hover:border-forest transition-colors"
+                  className="mt-6 inline-flex items-center justify-between gap-3 text-forest text-xs uppercase tracking-[0.18em] border-b border-forest/30 pb-2 w-full hover:border-forest transition-colors"
                 >
                   <span>Bezoek de website</span>
                   <ArrowUpRight size={18} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
