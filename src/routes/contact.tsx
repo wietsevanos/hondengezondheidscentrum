@@ -80,45 +80,51 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Contactgegevens, typografisch, zonder vlakken */}
+      {/* Contactgegevens — clean & minimal */}
       <section className="container-x mt-20 lg:mt-28">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 border-t border-border pt-12 lg:pt-16">
-          <div className="lg:col-span-4">
-            <p className="eyebrow text-olive mb-3 flex items-center gap-2"><MapPin size={14} /> Adres</p>
-            <p className="font-serif text-2xl lg:text-3xl text-forest leading-snug">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {/* Adres */}
+          <div>
+            <p className="eyebrow text-olive mb-4 flex items-center gap-2"><MapPin size={14} /> Adres</p>
+            <p className="text-forest text-[17px] leading-relaxed">
               Ramplaan 48<br />
-              <span className="text-walnut/70">2015 GW Haarlem</span>
+              2015 GW Haarlem
             </p>
             <a
               href="https://www.google.com/maps?q=Ramplaan+48,+Haarlem"
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm text-forest underline underline-offset-4 hover:text-terracotta"
+              className="mt-3 inline-block text-sm text-terracotta hover:underline underline-offset-4"
             >
-              Plan je route
+              Plan je route →
             </a>
           </div>
 
-          <div className="lg:col-span-4">
-            <p className="eyebrow text-olive mb-3 flex items-center gap-2"><Phone size={14} /> Telefoon</p>
-            <a href="tel:0642618286" className="font-serif text-2xl lg:text-3xl text-forest hover:text-terracotta transition-colors block">
+          {/* Telefoon */}
+          <div>
+            <p className="eyebrow text-olive mb-4 flex items-center gap-2"><Phone size={14} /> Telefoon</p>
+            <a href="tel:0642618286" className="text-forest text-[17px] hover:text-terracotta transition-colors block">
               06 4261 8286
             </a>
-            <p className="mt-3 text-sm text-walnut/70">Tijdens openingstijden bereikbaar.</p>
+            <p className="mt-3 text-sm text-walnut/60 leading-relaxed">Tijdens openingstijden bereikbaar.</p>
+          </div>
 
-            <p className="eyebrow text-olive mb-3 mt-8 flex items-center gap-2"><Mail size={14} /> E-mail</p>
-            <a href="mailto:info@dehoutenhond.nl" className="font-serif text-xl lg:text-2xl text-forest hover:text-terracotta transition-colors block break-all">
+          {/* E-mail */}
+          <div>
+            <p className="eyebrow text-olive mb-4 flex items-center gap-2"><Mail size={14} /> E-mail</p>
+            <a href="mailto:info@dehoutenhond.nl" className="text-forest text-[17px] hover:text-terracotta transition-colors block break-all">
               info@dehoutenhond.nl
             </a>
           </div>
 
-          <div className="lg:col-span-4">
-            <p className="eyebrow text-olive mb-3 flex items-center gap-2"><Instagram size={14} /> Instagram</p>
+          {/* Instagram */}
+          <div>
+            <p className="eyebrow text-olive mb-4 flex items-center gap-2"><Instagram size={14} /> Instagram</p>
             <a
               href="https://www.instagram.com/dehoutenhond/"
               target="_blank"
               rel="noreferrer"
-              className="font-serif text-2xl lg:text-3xl text-forest hover:text-terracotta transition-colors block"
+              className="text-forest text-[17px] hover:text-terracotta transition-colors block"
             >
               @dehoutenhond
             </a>
@@ -126,11 +132,11 @@ function ContactPage() {
               href="https://www.instagram.com/bottenbox.nl/"
               target="_blank"
               rel="noreferrer"
-              className="font-serif text-2xl lg:text-3xl text-forest hover:text-terracotta transition-colors block mt-2"
+              className="text-forest text-[17px] hover:text-terracotta transition-colors block mt-1"
             >
               @bottenbox.nl
             </a>
-            <p className="mt-3 text-sm text-walnut/70">Verhalen, nieuwe boxen en momenten uit de winkel.</p>
+            <p className="mt-3 text-sm text-walnut/60 leading-relaxed">Verhalen, nieuwe boxen en momenten uit de winkel.</p>
           </div>
         </div>
       </section>
