@@ -203,13 +203,13 @@ function HomePage() {
             { img: bottenboxClassic.url, name: "Bottenbox Classic", tag: "Voor middelgrote honden", desc: "Een uitgebalanceerde mix van natuurlijke kauwbotten en gezonde snacks.", bg: "bg-[#c89b8a]", text: "text-cream" },
             { img: bottenboxGiant.url, name: "Bottenbox Giant", tag: "Voor grote honden", desc: "Extra grote porties, stevige kauwbotten en robuuste snacks voor krachtige kaken.", bg: "bg-[#6b4a32]", text: "text-cream" },
           ].map((b) => (
-            <article key={b.name} className={`group rounded-3xl overflow-hidden ${b.bg} aspect-square p-4`}>
-              <div className="overflow-hidden rounded-2xl w-full h-full">
+            <article key={b.name} className={`group rounded-2xl overflow-hidden ${b.bg} p-3`}>
+              <div className="overflow-hidden rounded-xl w-full aspect-square">
                 <img
                   src={b.img}
                   alt={b.name}
                   loading="lazy"
-                  className="w-full h-full object-contain group-hover:scale-[1.04] transition-transform duration-[1.2s] ease-out"
+                  className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[1.2s] ease-out"
                 />
               </div>
             </article>
