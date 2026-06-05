@@ -22,7 +22,7 @@ const services = [
   {
     eyebrow: "01, De Houten Hond",
     title: "Natuurlijke voeding & supplementen",
-    img: naturalFood,
+    img: houtenHond.url,
     accent: "bg-olive",
     bullets: [
       "Eerlijke, natuurlijke samenstellingen",
