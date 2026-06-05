@@ -204,7 +204,7 @@ function HomePage() {
             { img: bottenboxGiant.url, name: "Bottenbox Giant", tag: "Voor grote honden", desc: "Extra grote porties, stevige kauwbotten en robuuste snacks voor krachtige kaken.", bg: "bg-[#6b4a32]", text: "text-cream" },
           ].map((b) => (
             <article key={b.name} className={`group rounded-2xl overflow-hidden ${b.bg} p-3`}>
-              <div className="overflow-hidden rounded-xl w-full aspect-square">
+              <div className="overflow-hidden rounded-xl w-full aspect-[3/4]">
                 <img
                   src={b.img}
                   alt={b.name}
