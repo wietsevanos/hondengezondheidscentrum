@@ -79,34 +79,50 @@ function DienstenPage() {
         </div>
       </section>
 
-      <section className="container-x mt-16 space-y-10">
+      <section className="container-x mt-16 space-y-12 lg:space-y-16">
         {services.map((s, i) => {
           const reversed = i % 2 === 1;
           return (
             <article
               key={s.title}
-              className="grid lg:grid-cols-12 gap-8 items-center rounded-3xl overflow-hidden bg-card"
+              className="group grid lg:grid-cols-12 gap-0 items-stretch rounded-2xl overflow-hidden bg-card border border-walnut/15 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)] transition-shadow duration-700"
             >
-              <div className={`lg:col-span-6 relative ${reversed ? "lg:order-2" : ""}`}>
-                <img src={s.img} alt={s.title} loading="lazy" width={1080} height={1600}
-                  className="w-full aspect-[5/4] object-cover" />
-                <span className={`absolute top-5 left-5 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.2em] text-cream ${s.accent}`}>
+              <div className={`lg:col-span-7 relative overflow-hidden ${reversed ? "lg:order-2" : ""}`}>
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  loading="lazy"
+                  width={1280}
+                  height={960}
+                  className="w-full h-full aspect-[4/3] lg:aspect-auto lg:min-h-[460px] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
+                />
+                <span className={`absolute top-6 left-6 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.22em] text-cream ${s.accent}`}>
                   {s.eyebrow}
                 </span>
               </div>
-              <div className={`lg:col-span-5 p-8 lg:p-12 ${reversed ? "lg:order-1 lg:col-start-2" : "lg:col-start-8"}`}>
-                <h2 className="font-serif text-4xl lg:text-5xl text-forest leading-tight">{s.title}</h2>
-                <ul className="mt-8 space-y-3">
-                  {s.bullets.map((b) => (
-                    <li key={b} className="flex gap-3 text-walnut">
-                      <Check size={18} className="mt-0.5 text-olive shrink-0" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a href={s.link} target="_blank" rel="noreferrer"
-                  className="mt-10 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-forest text-cream text-sm hover:bg-olive transition-colors">
-                  Bezoek de website <ArrowUpRight size={16} />
+              <div className={`lg:col-span-5 flex flex-col justify-between p-8 lg:p-14 ${reversed ? "lg:order-1" : ""}`}>
+                <div>
+                  <h2 className="font-serif text-3xl lg:text-[2.6rem] text-forest leading-[1.1] tracking-tight">
+                    {s.title}
+                  </h2>
+                  <div className="mt-6 h-px w-12 bg-walnut/25" />
+                  <ul className="mt-8 space-y-3.5">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="flex gap-3 text-walnut/85 text-[15px] leading-relaxed">
+                        <Check size={16} className="mt-1 text-olive shrink-0" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <a
+                  href={s.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-10 inline-flex items-center justify-between gap-3 text-forest text-sm uppercase tracking-[0.18em] border-b border-forest/30 pb-3 w-full hover:border-forest transition-colors"
+                >
+                  <span>Bezoek de website</span>
+                  <ArrowUpRight size={18} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </a>
               </div>
             </article>
