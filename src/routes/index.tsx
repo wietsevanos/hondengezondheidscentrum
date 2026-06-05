@@ -74,23 +74,30 @@ function HomePage() {
 
       {/* Trust bar */}
       <section className="container-x mt-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 border-y border-border py-10">
-          {[
-            { kpi: "4.9", label: "Google Reviews", Icon: Star },
-            { kpi: "Pers.", label: "Persoonlijk advies", Icon: HeartPulse },
-            { kpi: "Nat.", label: "Natuurlijk & deskundig", Icon: Leaf },
-            { kpi: "1+1", label: "Alles onder één dak", Icon: Sparkles },
-          ].map(({ kpi, label, Icon }) => (
-            <div key={label} className="flex items-center gap-4">
-              <div className="size-12 rounded-full bg-sage-soft/40 text-forest flex items-center justify-center font-serif">
-                <Icon size={20} />
+        <div className="border-y border-walnut/15 py-8 lg:py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {[
+              { kpi: "4.9", label: "Google Reviews", Icon: Star },
+              { kpi: "Pers.", label: "Persoonlijk advies", Icon: HeartPulse },
+              { kpi: "Nat.", label: "Natuurlijk & deskundig", Icon: Leaf },
+              { kpi: "1+1", label: "Alles onder één dak", Icon: Sparkles },
+            ].map(({ kpi, label, Icon }, i) => (
+              <div
+                key={label}
+                className={`flex flex-col items-center md:items-start px-4 lg:px-8 py-4 md:py-0 ${
+                  i < 3 ? "md:border-r border-walnut/15" : ""
+                } ${i < 2 ? "border-b border-walnut/15 md:border-b-0" : ""}`}
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <Icon size={18} strokeWidth={1.4} className="text-forest" />
+                  <span className="font-serif text-2xl text-walnut leading-none">{kpi}</span>
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.18em] font-medium text-olive">
+                  {label}
+                </p>
               </div>
-              <div>
-                <p className="font-serif text-xl text-forest leading-none">{kpi}</p>
-                <p className="text-[11px] tracking-[0.18em] uppercase text-walnut/70 mt-1">{label}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
