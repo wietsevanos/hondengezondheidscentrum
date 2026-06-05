@@ -1,12 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Mail, Phone } from "lucide-react";
+import logoHgc from "@/assets/logo-hgc.png.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="bg-forest text-cream/90 mt-32">
       <div className="container-x py-20 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2 max-w-md">
-          <h3 className="font-serif text-3xl text-cream mb-4">Hondengezondheidscentrum</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <img src={logoHgc.url} alt="" className="h-12 w-auto bg-cream rounded-md p-1.5" />
+            <h3 className="font-serif text-3xl text-cream">Hondengezondheidscentrum</h3>
+          </div>
           <p className="text-cream/70 leading-relaxed text-sm">
             Alles voor de gezondheid, verzorging en het welzijn van jouw hond,
             op één vertrouwde plek in Haarlem.
