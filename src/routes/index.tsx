@@ -203,21 +203,14 @@ function HomePage() {
             { img: bottenboxClassic.url, name: "Bottenbox Classic", tag: "Voor middelgrote honden", desc: "Een uitgebalanceerde mix van natuurlijke kauwbotten en gezonde snacks.", bg: "bg-[#c89b8a]", text: "text-cream" },
             { img: bottenboxGiant.url, name: "Bottenbox Giant", tag: "Voor grote honden", desc: "Extra grote porties, stevige kauwbotten en robuuste snacks voor krachtige kaken.", bg: "bg-[#6b4a32]", text: "text-cream" },
           ].map((b) => (
-            <article key={b.name} className={`group rounded-3xl overflow-hidden ${b.bg} ${b.text} flex flex-col`}>
-              <div className="p-4">
-                <div className="overflow-hidden rounded-2xl bg-black/5 aspect-square">
-                  <img
-                    src={b.img}
-                    alt={b.name}
-                    loading="lazy"
-                    className="w-full h-full object-contain group-hover:scale-[1.04] transition-transform duration-[1.2s] ease-out"
-                  />
-                </div>
-              </div>
-              <div className="px-6 pb-7 pt-2 flex flex-col flex-1">
-                <p className="text-[10px] tracking-[0.22em] uppercase opacity-80">{b.tag}</p>
-                <h3 className="font-serif text-2xl lg:text-[1.7rem] mt-2 leading-tight">{b.name}</h3>
-                <p className="mt-3 text-sm opacity-85 leading-relaxed flex-1">{b.desc}</p>
+            <article key={b.name} className={`group rounded-3xl overflow-hidden ${b.bg} aspect-square p-4`}>
+              <div className="overflow-hidden rounded-2xl w-full h-full">
+                <img
+                  src={b.img}
+                  alt={b.name}
+                  loading="lazy"
+                  className="w-full h-full object-contain group-hover:scale-[1.04] transition-transform duration-[1.2s] ease-out"
+                />
               </div>
             </article>
           ))}
