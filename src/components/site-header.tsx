@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoBone from "@/assets/logo-bone.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -15,7 +16,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur-md border-b border-border/60">
       <div className="container-x flex items-center justify-between h-20">
-        <Link to="/" className="flex items-baseline gap-2 group">
+        <Link to="/" className="flex items-center gap-3 group">
+          <img src={logoBone.url} alt="Hondengezondheidscentrum logo" className="h-10 w-auto" />
           <span className="font-serif text-2xl text-forest tracking-tight">Hondengezondheidscentrum</span>
         </Link>
         <nav className="hidden lg:flex items-center gap-10">
