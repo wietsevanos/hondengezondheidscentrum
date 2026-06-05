@@ -93,23 +93,23 @@ function DienstenPage() {
                   alt={s.title}
                   loading="lazy"
                   width={1280}
-                  height={960}
-                  className="w-full h-full aspect-[4/3] lg:aspect-auto lg:min-h-[460px] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
+                  height={800}
+                  className="w-full h-full aspect-[4/3] lg:aspect-[16/10] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
                 />
-                <span className={`absolute top-6 left-6 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.22em] text-cream ${s.accent}`}>
+                <span className={`absolute top-5 left-5 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.22em] text-cream ${s.accent}`}>
                   {s.eyebrow}
                 </span>
               </div>
-              <div className={`lg:col-span-5 flex flex-col justify-between p-8 lg:p-14 ${reversed ? "lg:order-1" : ""}`}>
+              <div className={`lg:col-span-5 flex flex-col justify-between p-7 lg:p-10 ${reversed ? "lg:order-1" : ""}`}>
                 <div>
-                  <h2 className="font-serif text-3xl lg:text-[2.6rem] text-forest leading-[1.1] tracking-tight">
+                  <h2 className="font-serif text-2xl lg:text-[1.9rem] text-forest leading-[1.15] tracking-tight">
                     {s.title}
                   </h2>
-                  <div className="mt-6 h-px w-12 bg-walnut/25" />
-                  <ul className="mt-8 space-y-3.5">
+                  <div className="mt-4 h-px w-10 bg-walnut/25" />
+                  <ul className="mt-5 space-y-2.5">
                     {s.bullets.map((b) => (
-                      <li key={b} className="flex gap-3 text-walnut/85 text-[15px] leading-relaxed">
-                        <Check size={16} className="mt-1 text-olive shrink-0" />
+                      <li key={b} className="flex gap-3 text-walnut/85 text-[14px] leading-snug">
+                        <Check size={15} className="mt-0.5 text-olive shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}
@@ -119,7 +119,7 @@ function DienstenPage() {
                   href={s.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-10 inline-flex items-center justify-between gap-3 text-forest text-sm uppercase tracking-[0.18em] border-b border-forest/30 pb-3 w-full hover:border-forest transition-colors"
+                  className="mt-6 inline-flex items-center justify-between gap-3 text-forest text-xs uppercase tracking-[0.18em] border-b border-forest/30 pb-2 w-full hover:border-forest transition-colors"
                 >
                   <span>Bezoek de website</span>
                   <ArrowUpRight size={18} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
