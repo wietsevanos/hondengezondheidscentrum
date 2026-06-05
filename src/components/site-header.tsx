@@ -15,10 +15,13 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur-md border-b border-border/60">
-      <div className="container-x flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-3 group">
-          <img src={logoHgc.url} alt="Hondengezondheidscentrum logo" className="h-11 w-auto" />
-          <span className="font-serif text-2xl text-forest tracking-tight">Hondengezondheidscentrum</span>
+      <div className="container-x flex items-center justify-between h-14 lg:h-20">
+        <Link to="/" className="flex items-center gap-2 lg:gap-3 group min-w-0">
+          <img src={logoHgc.url} alt="Hondengezondheidscentrum logo" className="h-8 lg:h-11 w-auto shrink-0" />
+          <span className="font-serif text-base sm:text-lg lg:text-2xl text-forest tracking-tight truncate">
+            <span className="sm:hidden">HGC Haarlem</span>
+            <span className="hidden sm:inline">Hondengezondheidscentrum</span>
+          </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-10">
           {nav.map((n) => (
@@ -44,9 +47,9 @@ export function SiteHeader() {
         <button
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden text-forest"
+          className="lg:hidden text-forest p-1 -mr-1"
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
       {open && (
