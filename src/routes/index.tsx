@@ -22,7 +22,9 @@ const bottenbox = bottenboxAsset.url;
 const brenda = brendaAsset.url;
 const storeInterior = storeInteriorAsset.url;
 const lifestyleWalk = lifestyleWalkAsset.url;
+const voedingsadviseur = voedingsadviseurAsset.url;
 import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
