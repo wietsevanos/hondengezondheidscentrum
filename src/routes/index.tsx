@@ -12,6 +12,8 @@ import bottenboxGiant from "@/assets/bottenbox-giant.jpg.asset.json";
 import bottenboxClassic from "@/assets/bottenbox-classic.jpg.asset.json";
 import bottenboxMini from "@/assets/bottenbox-mini.jpg.asset.json";
 import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg.asset.json";
+import voedingsadviseurAsset from "@/assets/visie-food.jpg.asset.json";
+
 const heroDog = heroDogAsset.url;
 const naturalFood = naturalFoodAsset.url;
 const houtenHond = houtenHondAsset.url;
