@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import houtenHond from "@/assets/houten-hond-storefront.jpg.asset.json";
 import grooming from "@/assets/elswout-dog.jpg.asset.json";
 import bottenbox from "@/assets/bottenbox-chews.jpg.asset.json";
+import voedingsadvies from "@/assets/visie-food.jpg.asset.json";
 import storeInterior from "@/assets/store-interior.jpg";
 import { ArrowUpRight, Check } from "lucide-react";
 
@@ -9,9 +10,9 @@ export const Route = createFileRoute("/diensten")({
   head: () => ({
     meta: [
       { title: "Diensten, Hondengezondheidscentrum Haarlem" },
-      { name: "description", content: "Natuurlijke voeding, professionele trimsalon en kauwboxen, alle diensten van het Hondengezondheidscentrum." },
+      { name: "description", content: "Natuurlijke voeding, persoonlijk voedingsadvies, professionele trimsalon en kauwboxen, alle diensten van het Hondengezondheidscentrum." },
       { property: "og:title", content: "Onze diensten, Hondengezondheidscentrum" },
-      { property: "og:description", content: "Drie disciplines, één toewijding aan hondenwelzijn in Haarlem." },
+      { property: "og:description", content: "Vier disciplines, één toewijding aan hondenwelzijn in Haarlem." },
       { property: "og:image", content: storeInterior },
     ],
   }),
@@ -30,6 +31,7 @@ const services = [
       "Supplementen op maat",
       "Premium snacks en wellness",
     ],
+    isNew: false,
     link: "https://www.dehoutenhond.nl/",
   },
   {
@@ -43,6 +45,7 @@ const services = [
       "Natuurlijke verzorgingsproducten",
       "Op afspraak, rustige omgeving",
     ],
+    isNew: false,
     link: "https://www.elswouthondentrimsalon.nl/",
   },
   {
@@ -56,9 +59,25 @@ const services = [
       "Geschikt voor elk formaat hond",
       "Bezorgd of opgehaald in Haarlem",
     ],
+    isNew: false,
     link: "https://bottenbox.nl/",
   },
+  {
+    eyebrow: "04, Hondenvoedingsadviseur",
+    title: "Persoonlijk voedingsadvies",
+    img: voedingsadvies.url,
+    accent: "bg-forest",
+    isNew: true,
+    bullets: [
+      "Hulp bij het vinden van passende voeding",
+      "Afgestemd op leeftijd, ras en gezondheid",
+      "Onafhankelijk en eerlijk advies",
+      "In de winkel of op afspraak",
+    ],
+    link: "/contact",
+  },
 ];
+
 
 function DienstenPage() {
   return (
@@ -72,9 +91,9 @@ function DienstenPage() {
         </div>
         <div className="lg:col-span-4 lg:col-start-9">
           <p className="text-walnut/80 leading-relaxed">
-            Of het nu om voeding, vachtverzorging of kauwplezier gaat, wij denken
-            mee. Elke discipline is verbonden met de andere, zodat jouw hond altijd
-            de juiste zorg krijgt.
+            Of het nu om voeding, voedingsadvies, vachtverzorging of kauwplezier
+            gaat, wij denken mee. Vier disciplines, met elkaar verbonden, zodat
+            jouw hond altijd de juiste zorg krijgt.
           </p>
         </div>
       </section>
@@ -99,6 +118,11 @@ function DienstenPage() {
                 <span className={`absolute top-5 left-5 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.22em] text-cream ${s.accent}`}>
                   {s.eyebrow}
                 </span>
+                {s.isNew && (
+                  <span className="absolute top-5 right-5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cream/95 text-forest text-[10px] uppercase tracking-[0.22em] font-medium shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+                    <span className="size-1.5 rounded-full bg-terracotta" /> Nieuw
+                  </span>
+                )}
               </div>
               <div className={`lg:col-span-5 flex flex-col justify-between p-7 lg:p-10 ${reversed ? "lg:order-1" : ""}`}>
                 <div>
@@ -117,13 +141,13 @@ function DienstenPage() {
                 </div>
                 <a
                   href={s.link}
-                  target="_blank"
-                  rel="noreferrer"
+                  {...(s.link.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
                   className="mt-6 inline-flex items-center justify-between gap-3 text-forest text-xs uppercase tracking-[0.18em] border-b border-forest/30 pb-2 w-full hover:border-forest transition-colors"
                 >
-                  <span>Bezoek de website</span>
+                  <span>{s.link.startsWith("http") ? "Bezoek de website" : "Plan een afspraak"}</span>
                   <ArrowUpRight size={18} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </a>
+
               </div>
             </article>
           );

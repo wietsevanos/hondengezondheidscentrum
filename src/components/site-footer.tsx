@@ -47,7 +47,7 @@ export function SiteFooter() {
       <div className="border-t border-cream/10">
         <div className="container-x py-6 flex flex-col md:flex-row justify-between gap-2 text-xs text-cream/50">
           <p>© {new Date().getFullYear()} Hondengezondheidscentrum Haarlem</p>
-          <p>De Houten Hond · Hondentrimsalon Elswout · Bottenbox.nl</p>
+          <p>De Houten Hond · Hondentrimsalon Elswout · Bottenbox.nl · Hondenvoedingsadviseur</p>
         </div>
       </div>
     </footer>
