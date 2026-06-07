@@ -3,7 +3,9 @@ import brendaAsset from "@/assets/brenda-shop-dogs.jpg.asset.json";
 const brenda = brendaAsset.url;
 import lifestyleWalkAsset from "@/assets/visie-food.jpg.asset.json";
 import storeInteriorAsset from "@/assets/brenda-shop-wide.jpg.asset.json";
+import diplomaAsset from "@/assets/diploma-voedingsdeskundige.jpeg.asset.json";
 const storeInterior = storeInteriorAsset.url;
+const diploma = diplomaAsset.url;
 
 const lifestyleWalk = lifestyleWalkAsset.url;
 
