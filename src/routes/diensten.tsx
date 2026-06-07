@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import houtenHond from "@/assets/houten-hond-storefront.jpg.asset.json";
 import grooming from "@/assets/elswout-dog.jpg.asset.json";
 import bottenbox from "@/assets/bottenbox-chews.jpg.asset.json";
+import voedingsadvies from "@/assets/visie-food.jpg.asset.json";
 import storeInterior from "@/assets/store-interior.jpg";
 import { ArrowUpRight, Check } from "lucide-react";
 
@@ -9,9 +10,9 @@ export const Route = createFileRoute("/diensten")({
   head: () => ({
     meta: [
       { title: "Diensten, Hondengezondheidscentrum Haarlem" },
-      { name: "description", content: "Natuurlijke voeding, professionele trimsalon en kauwboxen, alle diensten van het Hondengezondheidscentrum." },
+      { name: "description", content: "Natuurlijke voeding, persoonlijk voedingsadvies, professionele trimsalon en kauwboxen, alle diensten van het Hondengezondheidscentrum." },
       { property: "og:title", content: "Onze diensten, Hondengezondheidscentrum" },
-      { property: "og:description", content: "Drie disciplines, één toewijding aan hondenwelzijn in Haarlem." },
+      { property: "og:description", content: "Vier disciplines, één toewijding aan hondenwelzijn in Haarlem." },
       { property: "og:image", content: storeInterior },
     ],
   }),
@@ -58,7 +59,22 @@ const services = [
     ],
     link: "https://bottenbox.nl/",
   },
+  {
+    eyebrow: "04, Hondenvoedingsadviseur",
+    title: "Persoonlijk voedingsadvies",
+    img: voedingsadvies.url,
+    accent: "bg-forest",
+    isNew: true,
+    bullets: [
+      "Hulp bij het vinden van passende voeding",
+      "Afgestemd op leeftijd, ras en gezondheid",
+      "Onafhankelijk en eerlijk advies",
+      "In de winkel of op afspraak",
+    ],
+    link: "/contact",
+  },
 ];
+
 
 function DienstenPage() {
   return (
