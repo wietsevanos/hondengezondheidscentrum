@@ -77,7 +77,56 @@ function VisiePage() {
         </div>
       </section>
 
+      {/* Kwalificaties */}
+      <section className="container-x mt-32">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6">
+            <p className="eyebrow text-terracotta mb-5">Kwalificaties</p>
+            <h2 className="font-serif text-4xl lg:text-5xl text-forest leading-tight">
+              Officieel gediplomeerd <em className="text-olive">voedingsdeskundige voor honden.</em>
+            </h2>
+            <p className="mt-6 text-walnut/80 leading-relaxed max-w-lg">
+              Brenda voltooide de opleiding <span className="text-forest">Voedingsdeskundige voor honden</span> bij
+              Lotte's Logica, geaccrediteerd door de Raad van Beheer met 30 punten in categorie B.
+              Een fundament dat dagelijks wordt aangevuld met seminars en specialisatiecursussen.
+            </p>
+            <ul className="mt-8 space-y-3 text-walnut/80">
+              <li className="flex items-start gap-3">
+                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-terracotta shrink-0" />
+                <span>Diploma uitgereikt 20 februari 2020</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-terracotta shrink-0" />
+                <span>Geaccrediteerd door de Raad van Beheer (30 punten, cat. B)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-terracotta shrink-0" />
+                <span>Voortdurende bijscholing in voeding & welzijn</span>
+              </li>
+            </ul>
+          </div>
+          <div className="lg:col-span-6">
+            <figure className="group relative rounded-3xl bg-cream p-4 lg:p-6 shadow-[0_30px_60px_-30px_rgba(43,57,46,0.25)] ring-1 ring-walnut/10 transition-transform duration-700 hover:-translate-y-1">
+              <div className="absolute inset-0 rounded-3xl pointer-events-none ring-1 ring-inset ring-walnut/5" />
+              <img
+                src={diploma}
+                alt="Diploma Voedingsdeskundige voor honden — Brenda van der Vaart"
+                loading="lazy"
+                width={1480}
+                height={1050}
+                className="w-full h-auto rounded-2xl object-contain"
+              />
+              <figcaption className="mt-4 flex items-center justify-between px-2 text-xs uppercase tracking-[0.18em] text-walnut/60">
+                <span>Lotte's Logica</span>
+                <span>Diploma · 2020</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       {/* Principles */}
+
       <section className="container-x mt-32">
         <h2 className="font-serif text-4xl lg:text-5xl text-forest max-w-2xl leading-tight">
           Vier principes die alles bepalen wat wij doen.
