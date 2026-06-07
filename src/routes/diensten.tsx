@@ -115,6 +115,11 @@ function DienstenPage() {
                 <span className={`absolute top-5 left-5 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.22em] text-cream ${s.accent}`}>
                   {s.eyebrow}
                 </span>
+                {s.isNew && (
+                  <span className="absolute top-5 right-5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cream/95 text-forest text-[10px] uppercase tracking-[0.22em] font-medium shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+                    <span className="size-1.5 rounded-full bg-terracotta" /> Nieuw
+                  </span>
+                )}
               </div>
               <div className={`lg:col-span-5 flex flex-col justify-between p-7 lg:p-10 ${reversed ? "lg:order-1" : ""}`}>
                 <div>
@@ -133,13 +138,13 @@ function DienstenPage() {
                 </div>
                 <a
                   href={s.link}
-                  target="_blank"
-                  rel="noreferrer"
+                  {...(s.link.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
                   className="mt-6 inline-flex items-center justify-between gap-3 text-forest text-xs uppercase tracking-[0.18em] border-b border-forest/30 pb-2 w-full hover:border-forest transition-colors"
                 >
-                  <span>Bezoek de website</span>
+                  <span>{s.link.startsWith("http") ? "Bezoek de website" : "Plan een afspraak"}</span>
                   <ArrowUpRight size={18} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </a>
+
               </div>
             </article>
           );
