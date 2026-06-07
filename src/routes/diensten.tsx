@@ -31,6 +31,7 @@ const services = [
       "Supplementen op maat",
       "Premium snacks en wellness",
     ],
+    isNew: false,
     link: "https://www.dehoutenhond.nl/",
   },
   {
@@ -44,6 +45,7 @@ const services = [
       "Natuurlijke verzorgingsproducten",
       "Op afspraak, rustige omgeving",
     ],
+    isNew: false,
     link: "https://www.elswouthondentrimsalon.nl/",
   },
   {
@@ -57,6 +59,7 @@ const services = [
       "Geschikt voor elk formaat hond",
       "Bezorgd of opgehaald in Haarlem",
     ],
+    isNew: false,
     link: "https://bottenbox.nl/",
   },
   {
