@@ -88,9 +88,9 @@ function DienstenPage() {
         </div>
         <div className="lg:col-span-4 lg:col-start-9">
           <p className="text-walnut/80 leading-relaxed">
-            Of het nu om voeding, vachtverzorging of kauwplezier gaat, wij denken
-            mee. Elke discipline is verbonden met de andere, zodat jouw hond altijd
-            de juiste zorg krijgt.
+            Of het nu om voeding, voedingsadvies, vachtverzorging of kauwplezier
+            gaat, wij denken mee. Vier disciplines, met elkaar verbonden, zodat
+            jouw hond altijd de juiste zorg krijgt.
           </p>
         </div>
       </section>
