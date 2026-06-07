@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import storeInterior from "@/assets/store-interior.jpg";
+import storeInteriorAsset from "@/assets/mailen-chews.jpg.asset.json";
+const storeInterior = storeInteriorAsset.url;
 import { Instagram, MapPin, Mail, Clock, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
