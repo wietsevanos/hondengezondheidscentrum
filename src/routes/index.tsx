@@ -107,18 +107,20 @@ function HomePage() {
         <div className="lg:col-span-5">
           <p className="eyebrow text-terracotta mb-5">Eén ecosysteem</p>
           <h2 className="font-serif text-5xl lg:text-6xl text-forest leading-[1.05]">
-            Drie disciplines.<br />
+            Vier disciplines.<br />
             <em className="text-olive">Eén toewijding</em> aan jouw hond.
           </h2>
         </div>
         <div className="lg:col-span-6 lg:col-start-7">
           <p className="text-lg text-walnut/80 leading-relaxed">
-            Onder één dak vind je natuurlijke voeding, een deskundige trimsalon en
-            zorgvuldig samengestelde kauwboxen. Geen losse winkels, maar een
-            doorlopende zorg voor de gezondheid, vacht en het welzijn van je hond,
-            opgebouwd uit jarenlange ervaring en oprechte aandacht.
+            Onder één dak vind je natuurlijke voeding, persoonlijk
+            voedingsadvies, een deskundige trimsalon en zorgvuldig samengestelde
+            kauwboxen. Geen losse winkels, maar een doorlopende zorg voor de
+            gezondheid, vacht en het welzijn van je hond, opgebouwd uit
+            jarenlange ervaring en oprechte aandacht.
           </p>
         </div>
+
       </section>
 
       {/* THE THREE BRANDS, asymmetric editorial */}
