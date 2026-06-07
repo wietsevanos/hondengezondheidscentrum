@@ -74,25 +74,29 @@ function HomePage() {
 
       {/* Trust bar */}
       <section className="container-x mt-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 border-y border-border py-10">
+        <div className="trust-bar grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 border-y border-border py-10">
           {[
-            { kpi: "4.9", label: "Google Reviews", Icon: Star },
-            { kpi: "Pers.", label: "Persoonlijk advies", Icon: HeartPulse },
-            { kpi: "Nat.", label: "Natuurlijk & deskundig", Icon: Leaf },
-            { kpi: "1+1", label: "Alles onder één dak", Icon: Sparkles },
-          ].map(({ kpi, label, Icon }) => (
-            <div key={label} className="flex items-center gap-4">
-              <div className="size-12 rounded-full bg-sage-soft/40 text-forest flex items-center justify-center font-serif">
+            { kpi: "4.9", label: "Google Reviews", mobileLabel: "Reviews", Icon: Star },
+            { kpi: "Pers.", label: "Persoonlijk advies", mobileLabel: "Advies", Icon: HeartPulse },
+            { kpi: "Nat.", label: "Natuurlijk & deskundig", mobileLabel: "Natuurlijk", Icon: Leaf },
+            { kpi: "1+1", label: "Alles onder één dak", mobileLabel: "Compleet", Icon: Sparkles },
+          ].map(({ kpi, label, mobileLabel, Icon }) => (
+            <div key={label} className="trust-item flex items-center gap-4">
+              <div className="trust-icon size-12 rounded-full bg-sage-soft/40 text-forest flex items-center justify-center font-serif shrink-0">
                 <Icon size={20} />
               </div>
-              <div>
+              <div className="trust-text">
                 <p className="font-serif text-xl text-forest leading-none">{kpi}</p>
-                <p className="text-[11px] tracking-[0.18em] uppercase text-walnut/70 mt-1">{label}</p>
+                <p className="trust-label text-[11px] tracking-[0.18em] uppercase text-walnut/70 mt-1">
+                  <span className="hidden sm:inline">{label}</span>
+                  <span className="sm:hidden">{mobileLabel}</span>
+                </p>
               </div>
             </div>
           ))}
         </div>
       </section>
+
 
       {/* Intro editorial */}
       <section className="container-x mt-32 grid lg:grid-cols-12 gap-10 items-end">
