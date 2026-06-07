@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Hondengezondheidscentrum, Premium hondenwelzijn in Haarlem" },
-      { name: "description", content: "Natuurlijke voeding, professionele trimsalon en zorgvuldig samengestelde kauwboxen. Eén ecosysteem voor de gezondheid van jouw hond." },
+      { name: "description", content: "Natuurlijke voeding, persoonlijk voedingsadvies, professionele trimsalon en zorgvuldig samengestelde kauwboxen. Eén ecosysteem voor de gezondheid van jouw hond." },
       { property: "og:title", content: "Hondengezondheidscentrum Haarlem" },
       { property: "og:description", content: "Premium ecosysteem voor hondenwelzijn aan de Ramplaan in Haarlem." },
     ],
