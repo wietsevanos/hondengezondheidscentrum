@@ -242,6 +242,15 @@
   /* Footer marge boven verkleinen */
   footer.mt-32 { margin-top: 3rem; }
 
+  /* Store-interior foto: strakker op mobiel, geen vreemde uitsnede aan bovenkant */
+  section .relative.overflow-hidden > img.h-\[60vh\] {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    object-position: center;
+  }
+
+
   /* Trust bar: 4 naast elkaar, vertikaal gestapeld, strak en clean */
   .trust-bar {
     grid-template-columns: repeat(4, minmax(0, 1fr));
