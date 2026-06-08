@@ -24,6 +24,8 @@ const storeInterior = storeInteriorAsset.url;
 const lifestyleWalk = lifestyleWalkAsset.url;
 const voedingsadviseur = voedingsadviseurAsset.url;
 import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 
 export const Route = createFileRoute("/")({
