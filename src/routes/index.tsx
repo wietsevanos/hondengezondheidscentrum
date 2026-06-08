@@ -40,7 +40,10 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
+type BottenboxItem = { img: string; name: string; tag: string; desc: string; bg: string; text: string };
+
 function HomePage() {
+  const [activeBox, setActiveBox] = useState<BottenboxItem | null>(null);
   return (
     <>
       {/* HERO */}
