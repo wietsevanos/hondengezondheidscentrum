@@ -144,12 +144,12 @@ function ContactPage() {
 
       {/* Closing banner */}
       <section className="container-x mt-20 lg:mt-28">
-        <div className="rounded-3xl overflow-hidden relative">
+        <div className="rounded-3xl overflow-hidden relative min-h-[420px] sm:min-h-0">
           <img src={storeInterior} alt="Boutique interieur" loading="lazy" width={1920} height={1080}
-            className="w-full aspect-[16/7] object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-forest/85 via-forest/40 to-transparent" />
-          <div className="absolute inset-0 p-8 lg:p-16 flex flex-col justify-center max-w-xl">
-            <h2 className="font-serif text-4xl lg:text-5xl text-cream leading-tight">
+            className="absolute inset-0 w-full h-full object-cover sm:relative sm:aspect-[16/7]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-forest/85 via-forest/70 to-forest/40 sm:bg-gradient-to-r sm:from-forest/85 sm:via-forest/40 sm:to-transparent" />
+          <div className="relative sm:absolute sm:inset-0 p-6 sm:p-8 lg:p-16 flex flex-col justify-center max-w-xl min-h-[420px] sm:min-h-0">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-cream leading-tight">
               Liever even mailen?
             </h2>
             <p className="mt-4 text-cream/85">
