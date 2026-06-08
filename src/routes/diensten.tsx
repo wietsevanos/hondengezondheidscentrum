@@ -115,11 +115,11 @@ function DienstenPage() {
                   height={800}
                   className="w-full h-full aspect-[4/3] lg:aspect-[16/10] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
                 />
-                <span className={`absolute top-5 left-5 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.22em] text-cream ${s.accent}`}>
+                <span className={`absolute top-4 left-4 sm:top-5 sm:left-5 max-w-[calc(100%-6.5rem)] truncate px-3 py-1.5 rounded-full text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-cream ${s.accent}`}>
                   {s.eyebrow}
                 </span>
                 {s.isNew && (
-                  <span className="absolute top-5 right-5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cream/95 text-forest text-[10px] uppercase tracking-[0.22em] font-medium shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+                  <span className="absolute top-4 right-4 sm:top-5 sm:right-5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cream/95 text-forest text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] font-medium shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
                     <span className="size-1.5 rounded-full bg-terracotta" /> Nieuw
                   </span>
                 )}
