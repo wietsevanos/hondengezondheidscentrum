@@ -1,31 +1,21 @@
-import { createFileRoute } from "@tanstack/react-router";
-import brendaAsset from "@/assets/brenda-shop-dogs.jpg.asset.json";
-const brenda = brendaAsset.url;
-import lifestyleWalkAsset from "@/assets/visie-food.jpg.asset.json";
-import storeInteriorAsset from "@/assets/brenda-shop-wide.jpg.asset.json";
-import diplomaAsset from "@/assets/diploma-voedingsdeskundige.jpeg.asset.json";
-const storeInterior = storeInteriorAsset.url;
-const diploma = diplomaAsset.url;
+import { Helmet } from "react-helmet-async";
 
-const lifestyleWalk = lifestyleWalkAsset.url;
+import brenda from "@/assets/brenda-shop-dogs.jpg";
+import lifestyleWalk from "@/assets/visie-food.jpg";
+import storeInterior from "@/assets/brenda-shop-wide.jpg";
+import diploma from "@/assets/diploma-voedingsdeskundige.jpeg";
 
-
-export const Route = createFileRoute("/visie")({
-  head: () => ({
-    meta: [
-      { title: "Onze Visie, Hondengezondheidscentrum Haarlem" },
-      { name: "description", content: "Het verhaal van Brenda van der Vaart en de natuurlijke filosofie achter het Hondengezondheidscentrum in Haarlem." },
-      { property: "og:title", content: "Onze visie op hondenwelzijn" },
-      { property: "og:description", content: "Een natuurlijke, deskundige en persoonlijke aanpak voor elke hond." },
-      { property: "og:image", content: brenda },
-    ],
-  }),
-  component: VisiePage,
-});
-
-function VisiePage() {
+export function VisiePage() {
   return (
     <>
+      <Helmet>
+        <title>Onze Visie, Hondengezondheidscentrum Haarlem</title>
+        <meta name="description" content="Het verhaal van Brenda van der Vaart en de natuurlijke filosofie achter het Hondengezondheidscentrum in Haarlem." />
+        <meta property="og:title" content="Onze visie op hondenwelzijn" />
+        <meta property="og:description" content="Een natuurlijke, deskundige en persoonlijke aanpak voor elke hond." />
+        <meta property="og:image" content={brenda} />
+      </Helmet>
+
       <section className="container-x pt-16 lg:pt-24 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-7">
           <p className="eyebrow text-terracotta mb-5">Onze visie</p>
@@ -44,7 +34,6 @@ function VisiePage() {
         </div>
       </section>
 
-      {/* Story */}
       <section className="mt-32 bg-sage-soft/40">
         <div className="container-x py-24 grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
@@ -65,7 +54,7 @@ function VisiePage() {
               </p>
               <p>
                 Door voortdurend seminars en specialisatiecursussen te volgen,
-                blijft die expertise scherp en up-to-date. Geen losse adviezen ,
+                blijft die expertise scherp en up-to-date. Geen losse adviezen,
                 maar een doorlopende relatie waarin je hond echt centraal staat.
               </p>
               <p>
@@ -77,7 +66,6 @@ function VisiePage() {
         </div>
       </section>
 
-      {/* Kwalificaties */}
       <section className="container-x mt-32">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
@@ -108,14 +96,10 @@ function VisiePage() {
           <div className="lg:col-span-6">
             <figure className="group relative rounded-3xl bg-cream p-4 lg:p-6 shadow-[0_30px_60px_-30px_rgba(43,57,46,0.25)] ring-1 ring-walnut/10 transition-transform duration-700 hover:-translate-y-1">
               <div className="absolute inset-0 rounded-3xl pointer-events-none ring-1 ring-inset ring-walnut/5" />
-              <img
-                src={diploma}
+              <img src={diploma}
                 alt="Diploma Voedingsdeskundige voor honden — Brenda van der Vaart"
-                loading="lazy"
-                width={1480}
-                height={1050}
-                className="w-full h-auto rounded-2xl object-contain"
-              />
+                loading="lazy" width={1480} height={1050}
+                className="w-full h-auto rounded-2xl object-contain" />
               <figcaption className="mt-4 flex items-center justify-between px-2 text-xs uppercase tracking-[0.18em] text-walnut/60">
                 <span>Lotte's Logica</span>
                 <span>Diploma · 2020</span>
@@ -124,8 +108,6 @@ function VisiePage() {
           </div>
         </div>
       </section>
-
-      {/* Principles */}
 
       <section className="container-x mt-32">
         <h2 className="font-serif text-4xl lg:text-5xl text-forest max-w-2xl leading-tight">

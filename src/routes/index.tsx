@@ -1,51 +1,36 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import heroDogAsset from "@/assets/frontpage-dog.jpg.asset.json";
-import naturalFoodAsset from "@/assets/natural-chews.jpg.asset.json";
-import houtenHondAsset from "@/assets/houten-hond.jpg.asset.json";
-import bottenboxBrendaAsset from "@/assets/bottenbox-brenda.jpg.asset.json";
-import grooming from "@/assets/grooming.jpg";
-import bottenboxAsset from "@/assets/bottenbox-poster.jpg.asset.json";
-import brendaAsset from "@/assets/brenda-portrait-new.jpg.asset.json";
-import storeInteriorAsset from "@/assets/store-brenda-front.jpg.asset.json";
-import lifestyleWalkAsset from "@/assets/lifestyle-treat.jpg.asset.json";
-import bottenboxGiant from "@/assets/bottenbox-giant.jpg.asset.json";
-import bottenboxClassic from "@/assets/bottenbox-classic.jpg.asset.json";
-import bottenboxMini from "@/assets/bottenbox-mini.jpg.asset.json";
-import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg.asset.json";
-import voedingsadviseurAsset from "@/assets/voedingsadviseur-hond.jpg.asset.json";
-
-const heroDog = heroDogAsset.url;
-const naturalFood = naturalFoodAsset.url;
-const houtenHond = houtenHondAsset.url;
-const bottenboxBrenda = bottenboxBrendaAsset.url;
-const bottenbox = bottenboxAsset.url;
-const brenda = brendaAsset.url;
-const storeInterior = storeInteriorAsset.url;
-const lifestyleWalk = lifestyleWalkAsset.url;
-const voedingsadviseur = voedingsadviseurAsset.url;
-import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import { ArrowUpRight, Leaf, HeartPulse, Sparkles, Star } from "lucide-react";
+
+import heroDog from "@/assets/frontpage-dog.jpg";
+import houtenHond from "@/assets/houten-hond.jpg";
+import bottenboxBrenda from "@/assets/bottenbox-brenda.jpg";
+import grooming from "@/assets/grooming.jpg";
+import brenda from "@/assets/brenda-portrait-new.jpg";
+import storeInterior from "@/assets/store-brenda-front.jpg";
+import lifestyleWalk from "@/assets/lifestyle-treat.jpg";
+import bottenboxGiant from "@/assets/bottenbox-giant.jpg";
+import bottenboxClassic from "@/assets/bottenbox-classic.jpg";
+import bottenboxMini from "@/assets/bottenbox-mini.jpg";
+import bottenboxPuppy from "@/assets/bottenbox-puppy.jpg";
+import voedingsadviseur from "@/assets/voedingsadviseur-hond.jpg";
+
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Hondengezondheidscentrum, Premium hondenwelzijn in Haarlem" },
-      { name: "description", content: "Natuurlijke voeding, persoonlijk voedingsadvies, professionele trimsalon en zorgvuldig samengestelde kauwboxen. Eén ecosysteem voor de gezondheid van jouw hond." },
-      { property: "og:title", content: "Hondengezondheidscentrum Haarlem" },
-      { property: "og:description", content: "Premium ecosysteem voor hondenwelzijn aan de Ramplaan in Haarlem." },
-    ],
-  }),
-  component: HomePage,
-});
 
 type BottenboxItem = { img: string; name: string; tag: string; desc: string; bg: string; text: string };
 
-function HomePage() {
+export function HomePage() {
   const [activeBox, setActiveBox] = useState<BottenboxItem | null>(null);
   return (
     <>
+      <Helmet>
+        <title>Hondengezondheidscentrum, Premium hondenwelzijn in Haarlem</title>
+        <meta name="description" content="Natuurlijke voeding, persoonlijk voedingsadvies, professionele trimsalon en zorgvuldig samengestelde kauwboxen. Eén ecosysteem voor de gezondheid van jouw hond." />
+        <meta property="og:title" content="Hondengezondheidscentrum Haarlem" />
+        <meta property="og:description" content="Premium ecosysteem voor hondenwelzijn aan de Ramplaan in Haarlem." />
+      </Helmet>
+
       {/* HERO */}
       <section className="container-x pt-6 lg:pt-10">
         <div className="relative rounded-3xl overflow-hidden bg-forest">
@@ -106,7 +91,6 @@ function HomePage() {
         </div>
       </section>
 
-
       {/* Intro editorial */}
       <section className="container-x mt-32 grid lg:grid-cols-12 gap-10 items-end">
         <div className="lg:col-span-5">
@@ -125,19 +109,14 @@ function HomePage() {
             jarenlange ervaring en oprechte aandacht.
           </p>
         </div>
-
       </section>
 
-      {/* THE FOUR DISCIPLINES, asymmetric editorial */}
+      {/* THE FOUR DISCIPLINES */}
       <section className="container-x mt-20">
         <div className="grid lg:grid-cols-12 gap-6">
-          {/* Card 1, large left */}
-          <a
-            href="https://www.dehoutenhond.nl/"
-            target="_blank" rel="noreferrer"
-            className="group lg:col-span-7 lg:row-span-3 relative rounded-3xl overflow-hidden bg-olive min-h-[520px] lg:min-h-[680px]"
-          >
-            <img src={houtenHond} alt="De Houten Hond, houten wolfsculptuur" loading="lazy" width={1080} height={1600}
+          <a href="https://www.dehoutenhond.nl/" target="_blank" rel="noreferrer"
+            className="group lg:col-span-7 lg:row-span-3 relative rounded-3xl overflow-hidden bg-olive min-h-[520px] lg:min-h-[680px]">
+            <img src={houtenHond} alt="De Houten Hond" loading="lazy" width={1080} height={1600}
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/40 to-transparent" />
             <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-between">
@@ -155,12 +134,8 @@ function HomePage() {
             </div>
           </a>
 
-          {/* Card 2, top right */}
-          <a
-            href="https://www.elswouthondentrimsalon.nl/"
-            target="_blank" rel="noreferrer"
-            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-sand min-h-[220px]"
-          >
+          <a href="https://www.elswouthondentrimsalon.nl/" target="_blank" rel="noreferrer"
+            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-sand min-h-[220px]">
             <img src={grooming} alt="Hondentrimsalon Elswout" loading="lazy" width={1080} height={1600}
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-walnut/85 via-walnut/30 to-transparent" />
@@ -173,13 +148,9 @@ function HomePage() {
             </div>
           </a>
 
-          {/* Card 3, middle right */}
-          <a
-            href="https://bottenbox.nl/"
-            target="_blank" rel="noreferrer"
-            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-terracotta/90 min-h-[220px]"
-          >
-            <img src={bottenboxBrenda} alt="Bottenbox kauwproducten met Brenda en hond" loading="lazy" width={1080} height={1080}
+          <a href="https://bottenbox.nl/" target="_blank" rel="noreferrer"
+            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-terracotta/90 min-h-[220px]">
+            <img src={bottenboxBrenda} alt="Bottenbox kauwproducten" loading="lazy" width={1080} height={1080}
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-walnut/85 via-walnut/30 to-transparent" />
             <div className="absolute inset-0 p-7 flex flex-col justify-end">
@@ -191,12 +162,9 @@ function HomePage() {
             </div>
           </a>
 
-          {/* Card 4, NEW, bottom right */}
-          <Link
-            to="/diensten"
-            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-forest min-h-[220px] ring-1 ring-sage-soft/40"
-          >
-            <img src={voedingsadviseur} alt="Hondenvoedingsadviseur, persoonlijk voedingsadvies" loading="lazy" width={1080} height={1080}
+          <Link to="/diensten"
+            className="group lg:col-span-5 relative rounded-3xl overflow-hidden bg-forest min-h-[220px] ring-1 ring-sage-soft/40">
+            <img src={voedingsadviseur} alt="Hondenvoedingsadviseur" loading="lazy" width={1080} height={1080}
               className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
             <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/45 to-forest/10" />
             <span className="absolute top-5 right-5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cream/95 text-forest text-[10px] uppercase tracking-[0.22em] font-medium">
@@ -212,7 +180,6 @@ function HomePage() {
           </Link>
         </div>
       </section>
-
 
       {/* BOTTENBOX COLLECTION */}
       <section className="container-x mt-32">
@@ -234,10 +201,10 @@ function HomePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {([
-            { img: bottenboxPuppy.url, name: "Bottenbox Puppy", tag: "Voor jonge honden", desc: "Zachte kauwbotten en puppy vriendelijke snacks, perfect voor melktandjes.", bg: "bg-[#b88a3e]", text: "text-cream" },
-            { img: bottenboxMini.url, name: "Bottenbox Mini", tag: "Voor kleine honden", desc: "Zorgvuldig op maat voor kleine kaakjes met veel variatie voor urenlang kauwplezier.", bg: "bg-[#a8b88a]", text: "text-forest" },
-            { img: bottenboxClassic.url, name: "Bottenbox Classic", tag: "Voor middelgrote honden", desc: "Een uitgebalanceerde mix van natuurlijke kauwbotten en gezonde snacks.", bg: "bg-[#c89b8a]", text: "text-cream" },
-            { img: bottenboxGiant.url, name: "Bottenbox Giant", tag: "Voor grote honden", desc: "Extra grote porties, stevige kauwbotten en robuuste snacks voor krachtige kaken.", bg: "bg-[#6b4a32]", text: "text-cream" },
+            { img: bottenboxPuppy, name: "Bottenbox Puppy", tag: "Voor jonge honden", desc: "Zachte kauwbotten en puppy vriendelijke snacks, perfect voor melktandjes.", bg: "bg-[#b88a3e]", text: "text-cream" },
+            { img: bottenboxMini, name: "Bottenbox Mini", tag: "Voor kleine honden", desc: "Zorgvuldig op maat voor kleine kaakjes met veel variatie voor urenlang kauwplezier.", bg: "bg-[#a8b88a]", text: "text-forest" },
+            { img: bottenboxClassic, name: "Bottenbox Classic", tag: "Voor middelgrote honden", desc: "Een uitgebalanceerde mix van natuurlijke kauwbotten en gezonde snacks.", bg: "bg-[#c89b8a]", text: "text-cream" },
+            { img: bottenboxGiant, name: "Bottenbox Giant", tag: "Voor grote honden", desc: "Extra grote porties, stevige kauwbotten en robuuste snacks voor krachtige kaken.", bg: "bg-[#6b4a32]", text: "text-cream" },
           ] as BottenboxItem[]).map((b) => (
             <button
               type="button"
@@ -247,12 +214,8 @@ function HomePage() {
               className={`group relative rounded-2xl overflow-hidden ${b.bg} p-3 cursor-pointer text-left transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cream/70`}
             >
               <div className="overflow-hidden rounded-xl w-full aspect-[3/4] relative">
-                <img
-                  src={b.img}
-                  alt={b.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
-                />
+                <img src={b.img} alt={b.name} loading="lazy"
+                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110" />
               </div>
             </button>
           ))}
@@ -276,12 +239,8 @@ function HomePage() {
                   <DialogDescription className="mt-5 text-walnut/85 text-[15px] leading-relaxed">
                     {activeBox.desc}
                   </DialogDescription>
-                  <a
-                    href="https://bottenbox.nl/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-8 self-start inline-flex items-center gap-2 px-6 py-3 rounded-full bg-forest text-cream text-sm font-medium hover:bg-forest/90 transition-colors"
-                  >
+                  <a href="https://bottenbox.nl/" target="_blank" rel="noreferrer"
+                    className="mt-8 self-start inline-flex items-center gap-2 px-6 py-3 rounded-full bg-forest text-cream text-sm font-medium hover:bg-forest/90 transition-colors">
                     Bekijk op bottenbox.nl <ArrowUpRight size={16} />
                   </a>
                 </div>
@@ -290,34 +249,25 @@ function HomePage() {
           </DialogContent>
         </Dialog>
 
-
         <div className="mt-10 flex justify-center">
-          <a
-            href="https://bottenbox.nl/"
-            target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-forest text-cream text-sm hover:bg-forest/90 transition-colors"
-          >
+          <a href="https://bottenbox.nl/" target="_blank" rel="noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-forest text-cream text-sm hover:bg-forest/90 transition-colors">
             Ontdek alle boxen op bottenbox.nl <ArrowUpRight size={16} />
           </a>
         </div>
       </section>
 
-      {/* PHILOSOPHY, sage colored band */}
+      {/* PHILOSOPHY */}
       <section className="mt-32 bg-sage-soft/50">
-
         <div className="container-x py-24 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 relative">
-            <img
-              src={lifestyleWalk}
-              alt="Wandelen met de hond in de duinen bij Haarlem"
+            <img src={lifestyleWalk} alt="Wandelen met de hond in de duinen bij Haarlem"
               loading="lazy" width={1920} height={1080}
-              className="rounded-3xl aspect-[4/5] object-cover w-full shadow-2xl shadow-forest/10"
-            />
+              className="rounded-3xl aspect-[4/5] object-cover w-full shadow-2xl shadow-forest/10" />
             <div className="hidden lg:block absolute -right-8 -bottom-8 bg-cream rounded-2xl px-6 py-5 shadow-xl max-w-xs">
               <p className="eyebrow text-terracotta mb-2">Natuurlijke aanpak</p>
               <p className="text-sm text-walnut leading-relaxed">
-                Voeding, beweging en verzorging, in balans afgestemd op
-                jouw hond.
+                Voeding, beweging en verzorging, in balans afgestemd op jouw hond.
               </p>
             </div>
           </div>
@@ -348,7 +298,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* BRENDA / ABOUT */}
+      {/* BRENDA */}
       <section className="container-x mt-32 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 order-2 lg:order-1">
           <p className="eyebrow text-terracotta mb-5">Het gezicht achter het centrum</p>
@@ -362,19 +312,16 @@ function HomePage() {
             doordachte aanpak te bieden voor voeding, verzorging en gezondheid.
           </p>
           <blockquote className="mt-10 border-l-2 border-terracotta pl-6 font-serif text-2xl lg:text-3xl text-forest italic max-w-lg">
-            “Honden vertellen het zelf, als je goed luistert, weet je precies wat ze nodig hebben.”
+            "Honden vertellen het zelf, als je goed luistert, weet je precies wat ze nodig hebben."
           </blockquote>
           <Link to="/visie" className="inline-flex items-center gap-2 mt-10 px-6 py-3 rounded-full bg-forest text-cream text-sm">
             Lees ons volledige verhaal <ArrowUpRight size={16} />
           </Link>
         </div>
         <div className="lg:col-span-5 order-1 lg:order-2 relative">
-          <img
-            src={brenda}
-            alt="Brenda van der Vaart in de winkel"
+          <img src={brenda} alt="Brenda van der Vaart in de winkel"
             loading="lazy" width={1080} height={1600}
-            className="rounded-3xl aspect-[4/5] object-cover w-full"
-          />
+            className="rounded-3xl aspect-[4/5] object-cover w-full" />
           <div className="absolute -bottom-6 -left-6 bg-terracotta text-cream rounded-2xl px-5 py-4 hidden sm:block">
             <p className="font-serif text-2xl leading-none">15+ jaar</p>
             <p className="text-xs uppercase tracking-widest mt-1 text-cream/85">ervaring</p>
@@ -382,7 +329,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* STORE INTERIOR FULL-BLEED */}
+      {/* STORE INTERIOR */}
       <section className="mt-32">
         <div className="container-x">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
@@ -398,12 +345,9 @@ function HomePage() {
           </div>
         </div>
         <div className="relative overflow-hidden">
-          <img
-            src={storeInterior}
-            alt="Interieur van de boutique aan de Ramplaan Haarlem"
+          <img src={storeInterior} alt="Interieur van de boutique aan de Ramplaan Haarlem"
             loading="lazy" width={1920} height={1080}
-            className="w-full h-[60vh] min-h-[420px] object-cover"
-          />
+            className="w-full h-[60vh] min-h-[420px] object-cover" />
         </div>
       </section>
 

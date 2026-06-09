@@ -1,17 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { Star, Quote } from "lucide-react";
-
-export const Route = createFileRoute("/reviews")({
-  head: () => ({
-    meta: [
-      { title: "Reviews, Hondengezondheidscentrum Haarlem" },
-      { name: "description", content: "Ervaringen van hondeneigenaren met De Houten Hond, Hondentrimsalon Elswout en Bottenbox.nl in Haarlem." },
-      { property: "og:title", content: "Wat klanten over ons zeggen" },
-      { property: "og:description", content: "Lees authentieke reviews van hondeneigenaren uit Haarlem en omgeving." },
-    ],
-  }),
-  component: ReviewsPage,
-});
 
 const TOTAL_REVIEWS = 87;
 
@@ -39,31 +27,32 @@ function StarRow({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star
-          key={i}
-          size={16}
-          className={i < count ? "text-terracotta fill-terracotta" : "text-walnut/20"}
-        />
+        <Star key={i} size={16}
+          className={i < count ? "text-terracotta fill-terracotta" : "text-walnut/20"} />
       ))}
     </div>
   );
 }
 
-function ReviewsPage() {
+export function ReviewsPage() {
   return (
     <>
+      <Helmet>
+        <title>Reviews, Hondengezondheidscentrum Haarlem</title>
+        <meta name="description" content="Ervaringen van hondeneigenaren met De Houten Hond, Hondentrimsalon Elswout en Bottenbox.nl in Haarlem." />
+        <meta property="og:title" content="Wat klanten over ons zeggen" />
+        <meta property="og:description" content="Lees authentieke reviews van hondeneigenaren uit Haarlem en omgeving." />
+      </Helmet>
+
       <section className="container-x pt-16 lg:pt-24">
         <p className="eyebrow text-terracotta mb-5">Reviews</p>
         <h1 className="font-serif text-5xl lg:text-7xl text-forest max-w-3xl leading-[1.02]">
           Wat hondeneigenaren <em className="text-olive">over ons zeggen.</em>
         </h1>
 
-        <a
-          href="https://www.google.com/search?q=De+Houten+Hond+Haarlem+reviews"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-10 inline-flex items-center gap-4 rounded-2xl bg-card border border-border/70 pl-5 pr-6 py-4 shadow-[0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow"
-        >
+        <a href="https://www.google.com/search?q=De+Houten+Hond+Haarlem+reviews"
+          target="_blank" rel="noopener noreferrer"
+          className="mt-10 inline-flex items-center gap-4 rounded-2xl bg-card border border-border/70 pl-5 pr-6 py-4 shadow-[0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow">
           <GoogleG size={28} />
           <div className="h-8 w-px bg-border" />
           <div className="flex flex-col leading-tight">
@@ -79,12 +68,10 @@ function ReviewsPage() {
 
       <section className="container-x mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {reviews.map((r, i) => (
-          <article
-            key={i}
+          <article key={i}
             className={`rounded-3xl p-8 lg:p-10 flex flex-col gap-5 ${
               i % 3 === 0 ? "bg-sage-soft/50" : i % 3 === 1 ? "bg-sand" : "bg-card"
-            }`}
-          >
+            }`}>
             <div className="flex items-center justify-between">
               <Quote className="text-terracotta" />
               <GoogleG size={18} />
@@ -113,12 +100,9 @@ function ReviewsPage() {
               <p className="text-cream/70 text-sm mt-1">Gemiddelde beoordeling op Google</p>
             </div>
           </div>
-          <a
-            href="https://www.google.com/search?q=De+Houten+Hond+Haarlem+reviews"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-forest text-sm font-medium"
-          >
+          <a href="https://www.google.com/search?q=De+Houten+Hond+Haarlem+reviews"
+            target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-cream text-forest text-sm font-medium">
             <GoogleG size={16} /> Lees alle reviews
           </a>
         </div>

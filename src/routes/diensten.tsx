@@ -1,29 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
-import houtenHond from "@/assets/houten-hond-storefront.jpg.asset.json";
-import grooming from "@/assets/elswout-dog.jpg.asset.json";
-import bottenbox from "@/assets/bottenbox-chews-display.jpg.asset.json";
-import voedingsadvies from "@/assets/voedingsadvies-brenda.jpg.asset.json";
-import storeInterior from "@/assets/store-interior.jpg";
+import { Helmet } from "react-helmet-async";
 import { ArrowUpRight, Check } from "lucide-react";
 
-export const Route = createFileRoute("/diensten")({
-  head: () => ({
-    meta: [
-      { title: "Diensten, Hondengezondheidscentrum Haarlem" },
-      { name: "description", content: "Natuurlijke voeding, persoonlijk voedingsadvies, professionele trimsalon en kauwboxen, alle diensten van het Hondengezondheidscentrum." },
-      { property: "og:title", content: "Onze diensten, Hondengezondheidscentrum" },
-      { property: "og:description", content: "Vier disciplines, één toewijding aan hondenwelzijn in Haarlem." },
-      { property: "og:image", content: storeInterior },
-    ],
-  }),
-  component: DienstenPage,
-});
+import houtenHond from "@/assets/houten-hond-storefront.jpg";
+import grooming from "@/assets/elswout-dog.jpg";
+import bottenbox from "@/assets/bottenbox-chews-display.jpg";
+import voedingsadvies from "@/assets/voedingsadvies-brenda.jpg";
+import storeInterior from "@/assets/store-interior.jpg";
 
 const services = [
   {
     eyebrow: "01, De Houten Hond",
     title: "Natuurlijke voeding & supplementen",
-    img: houtenHond.url,
+    img: houtenHond,
     accent: "bg-olive",
     bullets: [
       "Eerlijke, natuurlijke samenstellingen",
@@ -37,7 +25,7 @@ const services = [
   {
     eyebrow: "02, Hondentrimsalon Elswout",
     title: "Trimsalon voor huid & vacht",
-    img: grooming.url,
+    img: grooming,
     accent: "bg-sage",
     bullets: [
       "Gericht op gezonde huid en vacht",
@@ -51,7 +39,7 @@ const services = [
   {
     eyebrow: "03, Bottenbox",
     title: "Natuurlijke kauwproducten",
-    img: bottenbox.url,
+    img: bottenbox,
     accent: "bg-terracotta",
     bullets: [
       "Zorgvuldig samengestelde boxen",
@@ -65,7 +53,7 @@ const services = [
   {
     eyebrow: "04, Hondenvoedingsadviseur",
     title: "Persoonlijk voedingsadvies",
-    img: voedingsadvies.url,
+    img: voedingsadvies,
     accent: "bg-forest",
     isNew: true,
     bullets: [
@@ -78,10 +66,17 @@ const services = [
   },
 ];
 
-
-function DienstenPage() {
+export function DienstenPage() {
   return (
     <>
+      <Helmet>
+        <title>Diensten, Hondengezondheidscentrum Haarlem</title>
+        <meta name="description" content="Natuurlijke voeding, persoonlijk voedingsadvies, professionele trimsalon en kauwboxen, alle diensten van het Hondengezondheidscentrum." />
+        <meta property="og:title" content="Onze diensten, Hondengezondheidscentrum" />
+        <meta property="og:description" content="Vier disciplines, één toewijding aan hondenwelzijn in Haarlem." />
+        <meta property="og:image" content={storeInterior} />
+      </Helmet>
+
       <section className="container-x pt-16 lg:pt-24 pb-10 grid lg:grid-cols-12 gap-10 items-end">
         <div className="lg:col-span-7">
           <p className="eyebrow text-terracotta mb-5">Onze diensten</p>
@@ -107,14 +102,8 @@ function DienstenPage() {
               className="group grid lg:grid-cols-12 gap-0 items-stretch rounded-2xl overflow-hidden bg-card border border-walnut/15 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)] transition-shadow duration-700"
             >
               <div className={`lg:col-span-7 relative overflow-hidden ${reversed ? "lg:order-2" : ""}`}>
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  loading="lazy"
-                  width={1280}
-                  height={800}
-                  className="w-full h-full aspect-[4/3] lg:aspect-[16/10] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
-                />
+                <img src={s.img} alt={s.title} loading="lazy" width={1280} height={800}
+                  className="w-full h-full aspect-[4/3] lg:aspect-[16/10] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]" />
                 <span className={`absolute top-4 left-4 sm:top-5 sm:left-5 max-w-[calc(100%-6.5rem)] truncate px-3 py-1.5 rounded-full text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-cream ${s.accent}`}>
                   {s.eyebrow}
                 </span>
@@ -139,15 +128,12 @@ function DienstenPage() {
                     ))}
                   </ul>
                 </div>
-                <a
-                  href={s.link}
+                <a href={s.link}
                   {...(s.link.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
-                  className="mt-6 inline-flex items-center justify-between gap-3 text-forest text-xs uppercase tracking-[0.18em] border-b border-forest/30 pb-2 w-full hover:border-forest transition-colors"
-                >
+                  className="mt-6 inline-flex items-center justify-between gap-3 text-forest text-xs uppercase tracking-[0.18em] border-b border-forest/30 pb-2 w-full hover:border-forest transition-colors">
                   <span>{s.link.startsWith("http") ? "Bezoek de website" : "Plan een afspraak"}</span>
                   <ArrowUpRight size={18} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </a>
-
               </div>
             </article>
           );

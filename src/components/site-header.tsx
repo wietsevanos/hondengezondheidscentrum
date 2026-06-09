@@ -1,10 +1,10 @@
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoHgc from "@/assets/logo-hgc.png.asset.json";
+import logoHgc from "@/assets/logo-hgc.png";
 
 const nav = [
-  { to: "/", label: "Home" },
+  { to: "/", label: "Home", end: true },
   { to: "/diensten", label: "Diensten" },
   { to: "/visie", label: "Onze Visie" },
   { to: "/reviews", label: "Reviews" },
@@ -17,22 +17,25 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur-md border-b border-border/60">
       <div className="container-x flex items-center justify-between h-14 lg:h-20">
         <Link to="/" className="flex items-center gap-2 lg:gap-3 group min-w-0">
-          <img src={logoHgc.url} alt="Hondengezondheidscentrum logo" className="h-8 lg:h-11 w-auto shrink-0" />
+          <img src={logoHgc} alt="Hondengezondheidscentrum logo" className="h-8 lg:h-11 w-auto shrink-0" />
           <span className="hidden sm:inline font-serif text-lg lg:text-2xl text-forest tracking-tight leading-tight truncate">
             Hondengezondheidscentrum
           </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-10">
           {nav.map((n) => (
-            <Link
+            <NavLink
               key={n.to}
               to={n.to}
-              activeOptions={{ exact: n.to === "/" }}
-              activeProps={{ className: "text-forest" }}
-              className="text-sm text-walnut hover:text-forest transition-colors relative [&.active]:after:scale-x-100 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-forest after:scale-x-0 after:origin-left after:transition-transform"
+              end={n.end}
+              className={({ isActive }) =>
+                `text-sm transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-forest after:origin-left after:transition-transform ${
+                  isActive ? "text-forest after:scale-x-100" : "text-walnut hover:text-forest after:scale-x-0"
+                }`
+              }
             >
               {n.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
         <div className="hidden lg:block">
