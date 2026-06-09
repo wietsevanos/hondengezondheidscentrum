@@ -1,20 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import storeInteriorAsset from "@/assets/mailen-chews.jpg.asset.json";
-const storeInterior = storeInteriorAsset.url;
+import { Helmet } from "react-helmet-async";
 import { Instagram, MapPin, Mail, Clock, Phone } from "lucide-react";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact & winkel, Hondengezondheidscentrum Haarlem" },
-      { name: "description", content: "Bezoek ons aan de Ramplaan 48 in Haarlem. Openingstijden, route en contactgegevens van het Hondengezondheidscentrum." },
-      { property: "og:title", content: "Bezoek ons aan de Ramplaan in Haarlem" },
-      { property: "og:description", content: "Welkom in onze boutique voor hondenwelzijn, Ramplaan 48, Haarlem." },
-      { property: "og:image", content: storeInterior },
-    ],
-  }),
-  component: ContactPage,
-});
+import storeInterior from "@/assets/mailen-chews.jpg";
 
 const openingHours = [
   { day: "Maandag", hours: "Gesloten", closed: true },
@@ -26,10 +13,17 @@ const openingHours = [
   { day: "Zondag", hours: "Gesloten", closed: true },
 ];
 
-function ContactPage() {
+export function ContactPage() {
   return (
     <>
-      {/* Intro */}
+      <Helmet>
+        <title>Contact & winkel, Hondengezondheidscentrum Haarlem</title>
+        <meta name="description" content="Bezoek ons aan de Ramplaan 48 in Haarlem. Openingstijden, route en contactgegevens van het Hondengezondheidscentrum." />
+        <meta property="og:title" content="Bezoek ons aan de Ramplaan in Haarlem" />
+        <meta property="og:description" content="Welkom in onze boutique voor hondenwelzijn, Ramplaan 48, Haarlem." />
+        <meta property="og:image" content={storeInterior} />
+      </Helmet>
+
       <section className="container-x pt-16 lg:pt-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
         <div className="lg:col-span-7">
           <p className="eyebrow text-terracotta mb-5">Contact & winkel</p>
@@ -46,9 +40,7 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Openingstijden + Map naast elkaar */}
       <section className="container-x mt-16 lg:mt-24 grid lg:grid-cols-12 gap-6 items-stretch">
-        {/* Opening hours */}
         <div className="lg:col-span-5 rounded-3xl bg-sand p-8 lg:p-10 flex flex-col">
           <div className="flex items-center justify-between mb-6">
             <p className="eyebrow text-olive flex items-center gap-2"><Clock size={14} /> Openingstijden</p>
@@ -67,7 +59,6 @@ function ContactPage() {
           <p className="mt-6 text-xs text-walnut/60 uppercase tracking-widest">Trimsalon op afspraak</p>
         </div>
 
-        {/* Map */}
         <div className="lg:col-span-7">
           <div className="rounded-3xl overflow-hidden border border-border h-[420px] lg:h-full lg:min-h-[520px]">
             <iframe
@@ -81,27 +72,21 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Contactgegevens — clean & minimal */}
       <section className="container-x mt-20 lg:mt-28">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Adres */}
           <div>
             <p className="eyebrow text-olive mb-4 flex items-center gap-2"><MapPin size={14} /> Adres</p>
             <p className="text-forest text-[17px] leading-relaxed">
               Ramplaan 48<br />
               2015 GW Haarlem
             </p>
-            <a
-              href="https://www.google.com/maps?q=Ramplaan+48,+Haarlem"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-3 inline-block text-sm text-terracotta hover:underline underline-offset-4"
-            >
+            <a href="https://www.google.com/maps?q=Ramplaan+48,+Haarlem"
+              target="_blank" rel="noreferrer"
+              className="mt-3 inline-block text-sm text-terracotta hover:underline underline-offset-4">
               Plan je route →
             </a>
           </div>
 
-          {/* Telefoon */}
           <div>
             <p className="eyebrow text-olive mb-4 flex items-center gap-2"><Phone size={14} /> Telefoon</p>
             <a href="tel:0642618286" className="text-forest text-[17px] hover:text-terracotta transition-colors block">
@@ -110,7 +95,6 @@ function ContactPage() {
             <p className="mt-3 text-sm text-walnut/60 leading-relaxed">Tijdens openingstijden bereikbaar.</p>
           </div>
 
-          {/* E-mail */}
           <div>
             <p className="eyebrow text-olive mb-4 flex items-center gap-2"><Mail size={14} /> E-mail</p>
             <a href="mailto:info@dehoutenhond.nl" className="text-forest text-[17px] hover:text-terracotta transition-colors block break-all">
@@ -118,23 +102,14 @@ function ContactPage() {
             </a>
           </div>
 
-          {/* Instagram */}
           <div>
             <p className="eyebrow text-olive mb-4 flex items-center gap-2"><Instagram size={14} /> Instagram</p>
-            <a
-              href="https://www.instagram.com/dehoutenhond/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-forest text-[17px] hover:text-terracotta transition-colors block"
-            >
+            <a href="https://www.instagram.com/dehoutenhond/" target="_blank" rel="noreferrer"
+              className="text-forest text-[17px] hover:text-terracotta transition-colors block">
               @dehoutenhond
             </a>
-            <a
-              href="https://www.instagram.com/bottenbox.nl/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-forest text-[17px] hover:text-terracotta transition-colors block mt-1"
-            >
+            <a href="https://www.instagram.com/bottenbox.nl/" target="_blank" rel="noreferrer"
+              className="text-forest text-[17px] hover:text-terracotta transition-colors block mt-1">
               @bottenbox.nl
             </a>
             <p className="mt-3 text-sm text-walnut/60 leading-relaxed">Verhalen, nieuwe boxen en momenten uit de winkel.</p>
@@ -142,7 +117,6 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Closing banner */}
       <section className="container-x mt-20 lg:mt-28">
         <div className="rounded-3xl overflow-hidden relative min-h-[420px] sm:min-h-0">
           <img src={storeInterior} alt="Boutique interieur" loading="lazy" width={1920} height={1080}
