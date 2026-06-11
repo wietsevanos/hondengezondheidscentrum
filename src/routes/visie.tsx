@@ -71,18 +71,13 @@ export function VisiePage() {
           <div className="lg:col-span-6">
             <p className="eyebrow text-terracotta mb-5">Kwalificaties</p>
             <h2 className="font-serif text-4xl lg:text-5xl text-forest leading-tight">
-              Officieel gediplomeerd <em className="text-olive">voedingsdeskundige voor honden.</em>
+              Gediplomeerd <em className="text-olive">voedingsdeskundige voor honden.</em>
             </h2>
             <p className="mt-6 text-walnut/80 leading-relaxed max-w-lg">
-              Brenda voltooide de opleiding <span className="text-forest">Voedingsdeskundige voor honden</span> bij
-              Lotte's Logica, geaccrediteerd door de Raad van Beheer met 30 punten in categorie B.
-              Een fundament dat dagelijks wordt aangevuld met seminars en specialisatiecursussen.
+              Brenda voltooide de opleiding <span className="text-forest">Voedingsdeskundige voor honden</span>.
+              Een sterk fundament dat structureel wordt aangevuld met seminars en specialistische cursussen.
             </p>
             <ul className="mt-8 space-y-3 text-walnut/80">
-              <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-terracotta shrink-0" />
-                <span>Diploma uitgereikt 20 februari 2020</span>
-              </li>
               <li className="flex items-start gap-3">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-terracotta shrink-0" />
                 <span>Geaccrediteerd door de Raad van Beheer (30 punten, cat. B)</span>
