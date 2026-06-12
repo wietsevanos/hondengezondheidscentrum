@@ -33,9 +33,9 @@ export function ContactPage() {
         </div>
         <div className="lg:col-span-5">
           <p className="text-walnut/80 text-lg leading-relaxed">
-            Loop gerust binnen voor advies, een afspraak voor de trimsalon of
-            simpelweg om kennis te maken. Een kop koffie staat klaar, en je hond
-            is uiteraard van harte welkom.
+            Loop gerust binnen en ontdek onze winkel vol natuurlijke voeding,
+            kauwsnacks en supplementen. Plan een persoonlijk advies of informeer
+            naar de mogelijkheden voor jouw hond.
           </p>
         </div>
       </section>
