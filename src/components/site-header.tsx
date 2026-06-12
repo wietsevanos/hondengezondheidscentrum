@@ -17,7 +17,21 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur-md border-b border-border/60">
       <div className="container-x flex items-center justify-between h-14 lg:h-20">
         <Link to="/" className="flex items-center gap-2 lg:gap-3 group min-w-0">
-          <img src={logoHgc} alt="Hondengezondheidscentrum logo" className="h-8 lg:h-11 w-auto shrink-0" />
+          <span
+            aria-label="Hondengezondheidscentrum logo"
+            role="img"
+            className="block h-8 lg:h-11 aspect-[526/686] shrink-0 bg-forest"
+            style={{
+              WebkitMaskImage: `url(${logoHgc})`,
+              maskImage: `url(${logoHgc})`,
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+              WebkitMaskPosition: "center",
+              maskPosition: "center",
+            }}
+          />
           <span className="hidden sm:inline font-serif text-lg lg:text-2xl text-forest tracking-tight leading-tight truncate">
             Hondengezondheidscentrum
           </span>
